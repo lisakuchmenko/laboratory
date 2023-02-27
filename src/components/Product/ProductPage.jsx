@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ProductInfo } from './ProductInfo';
 import { ProductSelector } from './ProductSelector';
 import { productData } from '../../data';
 import { ImagesSection } from './ImagesSection';
-import { motion, useMotionValue, useTransform, transform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
 	variantsHeader,
 	variantsMainImage,
@@ -15,6 +15,10 @@ import {
 
 export function ProductPage({ product, setProduct }) {
 	const [selectedImage, setSelectedImage] = useState(0);
+
+	useEffect(() => {
+		setSelectedImage(0);
+	}, [product.id]);
 
 	return (
 		<div className='max-w-[1050px] mx-auto relative'>
