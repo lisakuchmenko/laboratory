@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { List } from 'react-bootstrap-icons';
 
-export function Header() {
+export function Header({ cart }) {
 	const [color, setColor] = useState(false);
 
 	const changeColor = () => {
@@ -20,7 +20,7 @@ export function Header() {
 				<div className='flex w-[100px] justify-between'>
 					<div className='flex'>
 						<div className='mr-2'>CART</div>
-						<span>0</span>
+						<span>{cart}</span>
 					</div>
 					<List />
 				</div>

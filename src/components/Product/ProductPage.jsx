@@ -13,7 +13,7 @@ import {
 	variantsImagesSection,
 } from './animations';
 
-export function ProductPage({ product, setProduct }) {
+export function ProductPage({ product, setProduct, setCart }) {
 	const [selectedImage, setSelectedImage] = useState(0);
 
 	useEffect(() => {
@@ -47,6 +47,7 @@ export function ProductPage({ product, setProduct }) {
 								variants={variantsButton}
 								initial='hidden'
 								animate='show'
+								onClick={() => setCart((prev) => prev + 1)}
 								className='w-56 mt-12 pb-4 pt-5 text-text text-xs uppercase font-medium border-2 border-text rounded-full '
 							>
 								Add to cart
