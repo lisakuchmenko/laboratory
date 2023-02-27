@@ -21,7 +21,7 @@ export function ProductPage({ product, setProduct, setCart }) {
 	}, [product.id]);
 
 	return (
-		<div className='max-w-[1050px] mx-auto relative'>
+		<div className='max-w-[1100px] mx-auto relative'>
 			<motion.h1
 				key={product.id}
 				variants={variantsHeader}

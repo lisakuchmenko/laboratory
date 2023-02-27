@@ -1,0 +1,17 @@
+export const nutritionDetails = [
+	{ name: 'Calories', amount: '40', pdv: null },
+	{ name: 'Total Fat', amount: '0g', pdv: 0 },
+	{ name: 'Saturated Fat', amount: '0g', pdv: 0 },
+	{ name: 'Trans Fat', amount: '0g', pdv: 0 },
+	{ name: 'Cholesterol', amount: '0mg', pdv: 0 },
+	{ name: 'Sodium', amount: '0mg', pdv: 0 },
+	{ name: 'Total Carbohydrate', amount: '9g', pdv: 3 },
+	{ name: 'Dietary Fiber', amount: '1g', pdv: 4 },
+	{ name: 'Total Sugars', amount: '6g', pdv: 0 },
+	{ name: 'Added Sugar', amount: '0g', pdv: 0 },
+	{ name: 'Protein', amount: '0g', pdv: 0 },
+	{ name: 'Vitamin D', amount: '0mcg', pdv: 0 },
+	{ name: 'Calcium', amount: '3mg', pdv: 0 },
+	{ name: 'Iron', amount: '0mg', pdv: 0 },
+	{ name: 'Potassium', amount: '64mg', pdv: 2 },
+];
