@@ -5,6 +5,7 @@ import { Ingredients } from './components/Ingredients';
 import { TasteSection } from './components/TasteSection';
 import { ComparingSection } from './components/ComparingSection';
 import { NutritionFacts } from './components/NutritionFacts';
+import { SnackBetter } from './components/SnackBetter';
 import { useState } from 'react';
 import { productData } from './data';
 
@@ -21,6 +22,7 @@ function App() {
 			<TasteSection />
 			<ComparingSection />
 			<NutritionFacts />
+			<SnackBetter />
 		</div>
 	);
 }

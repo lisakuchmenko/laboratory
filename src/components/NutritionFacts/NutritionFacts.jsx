@@ -16,7 +16,7 @@ export function NutritionFacts() {
 				<tbody>
 					{nutritionDetails.map((el) => {
 						return (
-							<tr className='border-b h-16 align-bottom text-sm'>
+							<tr className='border-b h-16 align-bottom text-sm' key={el.name}>
 								<td>{el.name}</td>
 								<td className='text-xs'>{el.amount}</td>
 								<td className='text-xs'>{el.pdv !== null ? el.pdv + '%' : null}</td>
