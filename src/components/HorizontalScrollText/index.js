@@ -1,0 +1,1 @@
+export { HorizontalScrollText } from './HorizontalScrollText';

@@ -1,0 +1,54 @@
+export const variantsHeader = {
+	hidden: { opacity: 0, y: 80 },
+	show: {
+		opacity: 1,
+		y: 0,
+		transition: { type: 'easeIn', duration: 0.5 },
+	},
+};
+
+export const variantsMainImage = {
+	hidden: { opacity: 0 },
+	show: {
+		opacity: 1,
+		transition: {
+			duration: 0.2,
+		},
+	},
+};
+
+export const variantsSelector = {
+	hidden: { opacity: 0, y: 20 },
+	show: {
+		opacity: 1,
+		y: 0,
+		transition: { type: 'easeIn', duration: 0.5, delay: 0.4 },
+	},
+};
+
+export const variantsButton = {
+	hidden: { opacity: 0, y: 20 },
+	show: {
+		opacity: 1,
+		y: 0,
+		transition: { type: 'easeIn', duration: 0.5, delay: 0.7 },
+	},
+};
+
+export const variantsDescription = {
+	hidden: { opacity: 0, y: 20 },
+	show: {
+		opacity: 1,
+		y: 0,
+		transition: { type: 'easeIn', duration: 0.5, delay: 1.2 },
+	},
+};
+
+export const variantsImagesSection = {
+	hidden: { opacity: 0, y: 30 },
+	show: {
+		opacity: 1,
+		y: 0,
+		transition: { type: 'easeIn', duration: 0.5, delay: 0.9 },
+	},
+};

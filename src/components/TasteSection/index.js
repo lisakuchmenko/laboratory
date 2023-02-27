@@ -1,0 +1,1 @@
+export { TasteSection } from './TasteSection';

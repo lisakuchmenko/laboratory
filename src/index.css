@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@font-face {
+	font-family: 'Sporting Grotesque';
+	src: url('./fonts/SportingGrotesque/SportingGrotesque-Regular.otf');
+}
+
+@font-face {
+	font-family: 'Sporting Grotesque';
+	font-weight: bold;
+	src: url('./fonts/SportingGrotesque/SportingGrotesque-Bold.otf');
+}
+
+body {
+}
+
+.font-shadow {
+	text-shadow: 0 0 2px #fff;
+}
+
+.star {
+	position: absolute;
+	background: #fbfbfc;
+	border-radius: 100%;
+	height: 1px;
+	width: 1px;
+	top: calc(var(--y) * 1vh);
+	left: calc(var(--x) * 1vw);
+	transform: scale(var(--scale));
+}
