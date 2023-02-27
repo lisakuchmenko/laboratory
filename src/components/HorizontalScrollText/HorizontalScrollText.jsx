@@ -9,10 +9,10 @@ export function HorizontalScrollText() {
 	};
 
 	return (
-		<div className='h-140 flex items-center relative'>
+		<div className='h-140 flex items-center relative overflow-hidden'>
 			<h2
 				ref={textRef}
-				className='uppercase text-text font-bold text-9xl whitespace-nowrap absolute top-[300px] -right-[800px] '
+				className='overflow-hidden uppercase text-text font-bold text-9xl whitespace-nowrap absolute top-[300px] -right-[800px] '
 			>
 				zero added sugar
 			</h2>

@@ -2,7 +2,7 @@ export function ComparingSection() {
 	return (
 		<div className='w-full h-164 flex mx-auto'>
 			<div className='h-full grow bg-text font-bold py-28 px-16'>
-				<div className='flex flex-col h-full max-w-[525px] justify-between'>
+				<div className='flex flex-col h-full  justify-between mx-auto'>
 					<h3 className='text-primary font-bold text-8xl'>TALA</h3>
 					<div className='flex justify-between h-44 items-center'>
 						<div className=''>
@@ -20,7 +20,7 @@ export function ComparingSection() {
 				</div>
 			</div>
 			<div className='h-full grow font-bold text-text py-28 px-16'>
-				<div className='flex flex-col h-full max-w-[525px] justify-between'>
+				<div className='flex flex-col h-full max-w-[525px] justify-between mx-auto'>
 					<h3 className='text-text text-8xl'>THEM</h3>
 					<div className='flex justify-between h-44 items-center'>
 						<div className=''>
