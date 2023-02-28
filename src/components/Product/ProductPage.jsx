@@ -3,6 +3,8 @@ import { ProductInfo } from './ProductInfo';
 import { ProductSelector } from './ProductSelector';
 import { productData } from '../../data';
 import { ImagesSection } from './ImagesSection';
+import { Cart } from '../Cart';
+import { ProductPack } from './ProductPack';
 import { motion } from 'framer-motion';
 import {
 	variantsHeader,
@@ -15,6 +17,7 @@ import {
 
 export function ProductPage({ product, setProduct, setCart }) {
 	const [selectedImage, setSelectedImage] = useState(0);
+	const [quantity, setQuantity] = useState(0);
 
 	useEffect(() => {
 		setSelectedImage(0);
@@ -36,11 +39,12 @@ export function ProductPage({ product, setProduct, setCart }) {
 				<div className='w-full flex flex-col ml-8 mt-56 z-10 justify-between'>
 					<motion.div key={product.id} variants={variantsSelector} initial='hidden' animate='show'>
 						<ProductSelector data={productData} product={product} setProduct={setProduct} />
+						<ProductPack product={product} quantity={quantity} setQuantity={setQuantity} />
 					</motion.div>
 					<div className='w-full grow flex items-end justify-between'>
 						<div>
 							<motion.div key={product.name} variants={variantsDescription} initial='hidden' animate='show'>
-								<ProductInfo product={product} />
+								<ProductInfo product={product} quantity={quantity} />
 							</motion.div>
 							<motion.button
 								key={product.id}
