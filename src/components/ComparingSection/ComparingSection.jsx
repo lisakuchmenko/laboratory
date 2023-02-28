@@ -4,7 +4,7 @@ export function ComparingSection() {
 	return (
 		<div className='w-full h-164 flex mx-auto'>
 			<div className='h-full grow bg-text font-bold py-28 px-16 text-primary'>
-				<div className='flex flex-col h-full  justify-between mx-auto'>
+				<div className='flex flex-col h-full max-w-[525px]  justify-between mx-auto'>
 					<motion.h3
 						initial={{ opacity: 0 }}
 						whileInView={{
