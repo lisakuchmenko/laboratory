@@ -13,10 +13,20 @@ export function Header({ cart }) {
 		return () => window.removeEventListener('scroll', changeColor);
 	}, []);
 
+	//scroll to top
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
+	};
+
 	return (
 		<header className='fixed w-full z-10 top-12 text-text text-xxs'>
 			<div className='max-w-[1050px] mx-auto flex justify-between items-center'>
-				<h2 className={`tracking-widest ${color ? 'text-text' : 'text-primary'}`}>TALA</h2>
+				<h2 onClick={scrollToTop} className={`tracking-widest cursor-pointer ${color ? 'text-text' : 'text-primary'}`}>
+					TALA
+				</h2>
 				<div className='flex w-[100px] justify-between'>
 					<div className='flex'>
 						<div className='mr-2'>CART</div>
