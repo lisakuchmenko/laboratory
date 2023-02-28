@@ -17,14 +17,19 @@ export function Footer() {
 					<span className='absolute right-0'>→</span>
 				</div>
 			</div>
-			<div className='flex justify-start mt-20'>
-				<div className='flex flex-col'>
+			<div className='flex justify-between mt-20'>
+				<div className='flex flex-col mr-44'>
 					{sections.map((section) => (
-						<div className='flex justify-between w-110 border-b border-grey mt-8'>
+						<div className='flex justify-between w-110 border-b border-lightGrey mt-8 first:mt-0'>
 							<p className='text-sm'>{section}</p>
 							<div>→</div>
 						</div>
 					))}
+				</div>
+				<div className='text-xxs text-text w-96'>
+					<div>ABOUT</div>
+					<div>FAQS</div>
+					<div>CONTACT</div>
 				</div>
 			</div>
 		</div>

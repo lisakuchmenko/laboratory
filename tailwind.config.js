@@ -72,6 +72,7 @@ module.exports = {
 				4: '#f5f5ea',
 			},
 			grey: '#9e9e9e',
+			lightGrey: '#d3d3d353',
 		},
 	},
 	plugins: [],
