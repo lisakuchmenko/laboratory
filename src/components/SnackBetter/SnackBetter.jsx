@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import { motion, transform } from 'framer-motion';
 
 export function SnackBetter() {
-	const variants = { scale: 1.1, rotate: 6, transition: { duration: 0.3 } };
+	const variants = { scale: 1.1, rotate: 8, transition: { duration: 0.3 } };
 
 	return (
 		<div className='h-120 mx-auto'>
