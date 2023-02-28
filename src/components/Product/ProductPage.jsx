@@ -32,7 +32,7 @@ export function ProductPage({ product, setProduct, setCart }) {
 				{product.name}
 			</motion.h1>
 			<div className='flex justify-start'>
-				<img src={`images/${product.images[selectedImage]}`} alt='' className='w-[487px] h-[590px]' />
+				<img src={`images/${product.images[selectedImage]}`} alt='' className='w-121.75 h-147.5' />
 				<div className='w-full flex flex-col ml-8 mt-56 z-10 justify-between'>
 					<motion.div key={product.id} variants={variantsSelector} initial='hidden' animate='show'>
 						<ProductSelector data={productData} product={product} setProduct={setProduct} />
@@ -48,7 +48,7 @@ export function ProductPage({ product, setProduct, setCart }) {
 								initial='hidden'
 								animate='show'
 								onClick={() => setCart((prev) => prev + 1)}
-								className='w-56 mt-12 pb-4 pt-5 text-text text-xs uppercase font-medium border-2 border-text rounded-full '
+								className='w-56 mt-12 pb-4 pt-5 text-xs uppercase font-medium border-2 border-text rounded-full '
 							>
 								Add to cart
 							</motion.button>

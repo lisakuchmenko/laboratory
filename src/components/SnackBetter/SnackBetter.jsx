@@ -6,7 +6,7 @@ export function SnackBetter() {
 
 	return (
 		<div className='h-120 mx-auto'>
-			<h2 className='text-text text-3xl text-center mt-16 mb-12'>Snack Better.</h2>
+			<h2 className='text-3xl text-center mt-16 mb-12'>Snack Better.</h2>
 			<motion.div className='flex justify-center items-center'>
 				<motion.img
 					initial={{ opacity: 0, y: 50 }}

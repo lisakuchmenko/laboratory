@@ -1,7 +1,7 @@
 export function Footer() {
 	const sections = ['Mango', 'Banana', 'Pineapple', 'Pitahaya', 'Variety', 'Sampler'];
 	return (
-		<div className='h-auto text-text max-w-[1050px] mx-auto pb-20'>
+		<div className='h-auto max-w-262.5 mx-auto pb-20'>
 			<div className='w-full h-28 flex justify-between items-end'>
 				<h2 className='text-8.5xl font-bold h-full'>
 					TALA<span className='inline-block text-4xl align-top mt-4'>Ⓡ</span>
@@ -26,7 +26,7 @@ export function Footer() {
 						</div>
 					))}
 				</div>
-				<div className='text-xxs text-text w-96'>
+				<div className='text-xxs w-96'>
 					<div>ABOUT</div>
 					<div>FAQS</div>
 					<div>CONTACT</div>

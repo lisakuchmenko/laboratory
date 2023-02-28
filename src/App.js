@@ -15,7 +15,7 @@ function App() {
 	const [cart, setCart] = useState(0);
 
 	return (
-		<div className='bg-primary max-w-screen pt-8 font-sportingGrotesque'>
+		<div className='bg-primary max-w-screen pt-8 font-sportingGrotesque text-text'>
 			<Header cart={cart} />
 			<ProductPage product={product} setProduct={setProduct} setCart={setCart} />
 			<HorizontalScrollText />

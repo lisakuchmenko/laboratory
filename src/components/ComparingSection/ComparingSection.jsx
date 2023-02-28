@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export function ComparingSection() {
 	return (
 		<div className='w-full h-164 flex mx-auto'>
-			<div className='h-full grow bg-text font-bold py-28 px-16'>
+			<div className='h-full grow bg-text font-bold py-28 px-16 text-primary'>
 				<div className='flex flex-col h-full  justify-between mx-auto'>
 					<motion.h3
 						initial={{ opacity: 0 }}
@@ -15,7 +15,7 @@ export function ComparingSection() {
 								delay: 0.3,
 							},
 						}}
-						className='text-primary font-bold text-8xl'
+						className='font-bold text-8xl'
 					>
 						TALA
 					</motion.h3>
@@ -34,7 +34,7 @@ export function ComparingSection() {
 					</div>
 				</div>
 			</div>
-			<div className='h-full grow font-bold text-text py-28 px-16'>
+			<div className='h-full grow font-bold py-28 px-16'>
 				<div className='flex flex-col h-full max-w-[525px] justify-between mx-auto'>
 					<motion.h3
 						initial={{ opacity: 0 }}
@@ -46,12 +46,12 @@ export function ComparingSection() {
 								delay: 0.3,
 							},
 						}}
-						className='text-text text-8xl'
+						className='text-8xl'
 					>
 						THEM
 					</motion.h3>
-					<div className='flex justify-between h-44 items-center'>
-						<div className=''>
+					<div className='flex justify-between h-44 items-center text-text'>
+						<div>
 							<p className='text-7xl'>
 								13<span className='italic'>g</span>
 							</p>

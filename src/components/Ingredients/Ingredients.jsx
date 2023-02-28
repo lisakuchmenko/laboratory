@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export function Ingredients({ product }) {
 	return (
 		<motion.div
-			className='h-140 flex items-center justify-center'
+			className='h-140 flex items-center justify-center text-3xl'
 			initial='offscreen'
 			whileInView='onscreen'
 			viewport={{ once: true, amount: 0.8 }}
@@ -20,8 +20,8 @@ export function Ingredients({ product }) {
 					},
 				}}
 			>
-				<h2 className='text-3xl text-text'>Ingredient(s):</h2>
-				<h3 className='text-3xl text-text italic capitalize'>{product}</h3>
+				<h2>Ingredient(s):</h2>
+				<h3 className='italic capitalize'>{product}</h3>
 			</motion.div>
 		</motion.div>
 	);

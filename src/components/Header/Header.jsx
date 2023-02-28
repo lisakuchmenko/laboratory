@@ -22,12 +22,12 @@ export function Header({ cart }) {
 	};
 
 	return (
-		<header className='fixed w-full z-10 top-12 text-text text-xxs'>
-			<div className='max-w-[1050px] mx-auto flex justify-between items-center'>
+		<header className='fixed w-full z-10 top-12 text-xxs'>
+			<div className='max-w-262.5 mx-auto flex justify-between items-center'>
 				<h2 onClick={scrollToTop} className={`tracking-widest cursor-pointer ${color ? 'text-text' : 'text-primary'}`}>
 					TALA
 				</h2>
-				<div className='flex w-[100px] justify-between'>
+				<div className='flex w-25 justify-between'>
 					<div className='flex'>
 						<div className='mr-2'>CART</div>
 						<span>{cart}</span>

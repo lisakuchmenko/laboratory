@@ -40,8 +40,8 @@ export function TasteSection() {
 			}}
 		>
 			<div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-				<motion.h2 className='text-text text-4xl'>Tastes just like real fruit...</motion.h2>
-				<h3 className='text-text text-3xl italic text-center'>because it is real fruit.</h3>
+				<motion.h2 className='text-4xl'>Tastes just like real fruit...</motion.h2>
+				<h3 className='text-3xl italic text-center'>because it is real fruit.</h3>
 			</div>
 		</motion.div>
 	);

@@ -2,7 +2,7 @@ import { nutritionDetails } from '../../data';
 
 export function NutritionFacts() {
 	return (
-		<div className='max-w-[1050px] mx-auto h-full pt-24 pb-10 text-text'>
+		<div className='max-w-262.5 mx-auto h-full pt-24 pb-10'>
 			<h2 className='text-4xl'>Nutrition Facts</h2>
 			<p className='text-xxs mt-4'>12 servings per container</p>
 			<table className='w-full mt-2'>
