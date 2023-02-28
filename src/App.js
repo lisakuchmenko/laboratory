@@ -6,6 +6,7 @@ import { TasteSection } from './components/TasteSection';
 import { ComparingSection } from './components/ComparingSection';
 import { NutritionFacts } from './components/NutritionFacts';
 import { SnackBetter } from './components/SnackBetter';
+import { Footer } from './components/Footer';
 import { useState } from 'react';
 import { productData } from './data';
 
@@ -23,6 +24,7 @@ function App() {
 			<ComparingSection />
 			<NutritionFacts />
 			<SnackBetter />
+			<Footer />
 		</div>
 	);
 }

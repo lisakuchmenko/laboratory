@@ -5,7 +5,7 @@ export function SnackBetter() {
 	const variants = { scale: 1.1, rotate: 6, transition: { duration: 0.3 } };
 
 	return (
-		<div className='h-160 mx-auto'>
+		<div className='h-120 mx-auto'>
 			<h2 className='text-text text-3xl text-center mt-16 mb-12'>Snack Better.</h2>
 			<motion.div className='flex justify-center items-center'>
 				<motion.img

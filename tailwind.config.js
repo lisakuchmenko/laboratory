@@ -20,6 +20,7 @@ module.exports = {
 			'6xl': '3.75rem',
 			'7xl': '4.5rem',
 			'8xl': '6rem',
+			'8.5xl': '7rem',
 			'9xl': '8rem',
 			'10xl': '9rem',
 		},
@@ -47,7 +48,10 @@ module.exports = {
 		extend: {
 			spacing: {
 				0.125: '0.05px',
+				30: '120px',
 				75: '300px',
+				120: '480px',
+				130: '520px',
 				140: '560px',
 				150: '600px',
 				160: '640px',
