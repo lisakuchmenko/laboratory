@@ -13,10 +13,11 @@ export function ProductSelector({ data, product, setProduct }) {
 				return (
 					<div
 						key={el.name}
-						className={`text-text text-xxs uppercase cursor-pointer relative ${
+						className={`text-xxs uppercase cursor-pointer relative ${
 							product.name === el.name
-								? `after:absolute after:content-[''] after:top-6 after:left-0 after:w-7 after:h-0.5 ` + COLORS[i]
-								: ''
+								? `text-text after:absolute after:content-[''] after:top-6 after:left-0 after:w-7 after:h-0.5 ` +
+								  COLORS[i]
+								: 'text-lightGrey'
 						}`}
 						onClick={() => {
 							setProduct(el);

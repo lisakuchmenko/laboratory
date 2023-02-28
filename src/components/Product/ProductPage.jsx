@@ -32,7 +32,7 @@ export function ProductPage({ product, setProduct, setCart }) {
 				{product.name}
 			</motion.h1>
 			<div className='flex justify-start'>
-				<img src={`images/${product.images[selectedImage]}`} alt='' className='w-[500px] h-[590px]' />
+				<img src={`images/${product.images[selectedImage]}`} alt='' className='w-[487px] h-[590px]' />
 				<div className='w-full flex flex-col ml-8 mt-56 z-10 justify-between'>
 					<motion.div key={product.id} variants={variantsSelector} initial='hidden' animate='show'>
 						<ProductSelector data={productData} product={product} setProduct={setProduct} />

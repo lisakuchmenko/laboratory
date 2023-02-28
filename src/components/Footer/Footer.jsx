@@ -20,7 +20,7 @@ export function Footer() {
 			<div className='flex justify-between mt-20'>
 				<div className='flex flex-col mr-44'>
 					{sections.map((section) => (
-						<div className='flex justify-between w-110 border-b border-lightGrey mt-8 first:mt-0'>
+						<div key={section} className='flex justify-between w-110 border-b border-lightGrey mt-8 first:mt-0'>
 							<p className='text-sm'>{section}</p>
 							<div>→</div>
 						</div>
