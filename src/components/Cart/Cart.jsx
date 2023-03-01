@@ -34,12 +34,6 @@ export function Cart({ cart, setCart, openCart, setOpenCart }) {
 		};
 	}, [handleClickOutside]);
 
-	const handleClose = () => {
-		console.log('close');
-		setOpenCart(false);
-		setCartVisible(false);
-	};
-
 	return (
 		<div ref={ref} className='bg-[#e2ddd7] text-primary absolute right-0 top-8 z-20 w-80 flex flex-col rounded-lg'>
 			<div className='flex justify-between items-center text-sm font-bold pb-2 px-4 pt-4 border-b border-primary border-dotted'>
