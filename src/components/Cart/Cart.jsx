@@ -5,9 +5,9 @@ export function Cart({ cart, setCart, openCart, setOpenCart }) {
 	const [cartVisible, setCartVisible] = useState(false);
 	const ref = useRef(null);
 	const closeRef = useRef(null);
+	const removeRef = useRef(null);
 
 	useEffect(() => {
-		console.log('openCart', openCart);
 		if (openCart) {
 			setCartVisible(true);
 		}
@@ -15,11 +15,7 @@ export function Cart({ cart, setCart, openCart, setOpenCart }) {
 
 	const handleClickOutside = useCallback(
 		(event) => {
-			if (ref.current && !ref.current.contains(event.target) && cartVisible) {
-				setOpenCart(false);
-				setCartVisible(false);
-			}
-			if (closeRef.current && closeRef.current.contains(event.target) && cartVisible) {
+			if ((!ref.current.contains(event.target) || closeRef.current.contains(event.target)) && cartVisible) {
 				setOpenCart(false);
 				setCartVisible(false);
 			}
@@ -43,10 +39,25 @@ export function Cart({ cart, setCart, openCart, setOpenCart }) {
 				</div>
 			</div>
 			<div className='px-4 py-1'>
-				{cart.map((el, i) => (
-					<CartItem key={i} index={i} item={el} cart={cart} setCart={setCart} />
-				))}
+				{cart.length ? (
+					cart.map((el, i) => <CartItem key={i} index={i} item={el} cart={cart} setCart={setCart} ref={removeRef} />)
+				) : (
+					<div className='uppercase py-24 text-center font-bold text-xs'>sorry, there's nothing here yet</div>
+				)}
 			</div>
+			{cart.length ? (
+				<div className='border-t border-primary border-dotted px-4 py-9'>
+					<p className='text-base text-light'>Ok, lets get started.</p>
+					<input
+						className='w-full placeholder:text-s h-5 pl-1 pt-1 mt-2 border border-dark'
+						type='email'
+						name=''
+						id=''
+						placeholder='Email...'
+					/>
+					<button className='w-full rounded-full bg-dark uppercase text-light text-sm mt-4 pt-5 pb-4'>next</button>
+				</div>
+			) : null}
 		</div>
 	);
 }

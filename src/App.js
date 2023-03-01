@@ -15,10 +15,6 @@ function App() {
 	const [cart, setCart] = useState([]);
 	const [openCart, setOpenCart] = useState(false);
 
-	useEffect(() => {
-		console.log(openCart);
-	}, [openCart]);
-
 	return (
 		<div className='bg-primary max-w-screen pt-8 font-sportingGrotesque text-text'>
 			<Header cart={cart} setCart={setCart} openCart={openCart} setOpenCart={setOpenCart} />

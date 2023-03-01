@@ -78,6 +78,7 @@ module.exports = {
 			grey: '#9e9e9e',
 			lightGrey: '#d3d3d353',
 			light: '#d5cdc4',
+			dark: '#232025',
 		},
 		maxWidth: {
 			75: '300px',

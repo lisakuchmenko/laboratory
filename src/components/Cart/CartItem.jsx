@@ -1,6 +1,7 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef, forwardRef } from 'react';
 
-export function CartItem({ item, index, cart, setCart }) {
+export const CartItem = forwardRef((props, ref) => {
+	const { item, cart, setCart, index } = props;
 	const [value, setValue] = useState(item.quantity);
 
 	useEffect(() => {
@@ -23,7 +24,7 @@ export function CartItem({ item, index, cart, setCart }) {
 	};
 
 	return (
-		<div className='flex my-3 z-30'>
+		<div ref={ref} className='flex my-3 z-30'>
 			<img className='w-16 h-16 object-cover image-position' src={`/images/${item.product.images[2]}`} alt='' />
 			<div className='flex flex-col mx-4 grow'>
 				<h4 className='uppercase text-sm font-bold '>{item.product.name}</h4>
@@ -44,4 +45,4 @@ export function CartItem({ item, index, cart, setCart }) {
 			/>
 		</div>
 	);
-}
+});
