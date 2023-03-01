@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { List } from 'react-bootstrap-icons';
 import { Cart } from '../Cart';
 
-export function Header({ cart, openCart, setCart, setOpenCart }) {
+export function Header({ cart, openCart, setCart, setOpenCart, setOpenMenu }) {
 	const [color, setColor] = useState(false);
 
 	const changeColor = () => {
@@ -39,7 +39,9 @@ export function Header({ cart, openCart, setCart, setOpenCart }) {
 						<span className='inline-block w-4'>{sumOfItems}</span>
 						{openCart && <Cart cart={cart} setCart={setCart} openCart={openCart} setOpenCart={setOpenCart} />}
 					</div>
-					<List />
+					<div className='cursor-pointer' onClick={() => setOpenMenu(true)}>
+						<List />
+					</div>
 				</div>
 			</div>
 		</header>

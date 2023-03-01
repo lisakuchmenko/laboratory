@@ -23,6 +23,7 @@ module.exports = {
 			'8.5xl': '7rem',
 			'9xl': '8rem',
 			'10xl': '9rem',
+			'11xl': '10rem',
 		},
 		letterSpacing: {
 			widest: '0.25em',
