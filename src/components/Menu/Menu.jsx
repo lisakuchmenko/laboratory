@@ -10,10 +10,10 @@ export function Menu({ setOpenMenu }) {
 						<XLg />
 					</div>
 				</div>
-				<h1 className='mt-6 text-primary text-11xl font-bold -ml-2'>MENU</h1>
+				<h1 className='mt-6 text-primary text-11xl font-bold -ml-3.5'>MENU</h1>
 				<div className='flex mt-10'>
 					<div className='pt-36 mr-64 text-xl'>
-						<div className='mb-2'>Mango</div>
+						<div className='mb-2 cursor-pointer'>Mango</div>
 						<div className='mb-2'>Banana</div>
 						<div>Pineapple</div>
 					</div>
