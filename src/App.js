@@ -7,17 +7,18 @@ import { ComparingSection } from './components/ComparingSection';
 import { NutritionFacts } from './components/NutritionFacts';
 import { SnackBetter } from './components/SnackBetter';
 import { Footer } from './components/Footer';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { productData } from './data';
 
 function App() {
 	const [product, setProduct] = useState(productData[0]);
-	const [cart, setCart] = useState(0);
+	const [cart, setCart] = useState([]);
+	const [openCart, setOpenCart] = useState(false);
 
 	return (
 		<div className='bg-primary max-w-screen pt-8 font-sportingGrotesque text-text'>
-			<Header cart={cart} />
-			<ProductPage product={product} setProduct={setProduct} setCart={setCart} />
+			<Header cart={cart} setCart={setCart} openCart={openCart} setOpenCart={setOpenCart} />
+			<ProductPage product={product} setProduct={setProduct} setCart={setCart} setOpenCart={setOpenCart} />
 			<HorizontalScrollText />
 			<Ingredients product={product.name} />
 			<TasteSection />

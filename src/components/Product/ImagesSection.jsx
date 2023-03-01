@@ -10,10 +10,6 @@ const COLORS = [
 ];
 
 export function ImagesSection({ images, selectedImage, setSelectedImage, id }) {
-	useEffect(() => {
-		console.log(id);
-	}, [selectedImage]);
-
 	return (
 		<div>
 			{images.map((el, i) => {

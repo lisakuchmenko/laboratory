@@ -15,13 +15,31 @@ import {
 	variantsImagesSection,
 } from './animations';
 
-export function ProductPage({ product, setProduct, setCart }) {
+export function ProductPage({ product, setProduct, setCart, setOpenCart }) {
 	const [selectedImage, setSelectedImage] = useState(0);
 	const [quantity, setQuantity] = useState(0);
 
 	useEffect(() => {
 		setSelectedImage(0);
 	}, [product.id]);
+
+	const addToCart = () => {
+		setCart((prev) => {
+			const productInCart = prev.find(
+				(el) => el.product.name === product.name && el.bagSize === product.price[quantity].quantity
+			);
+			if (productInCart) {
+				return prev.map((el) => {
+					if (el.product.name === product.name && el.bagSize === product.price[quantity].quantity) {
+						return { ...el, quantity: el.quantity + 1 };
+					}
+					return el;
+				});
+			}
+			return [...prev, { product, quantity: 1, bagSize: product.price[quantity].quantity }];
+		});
+		setOpenCart(true);
+	};
 
 	return (
 		<div className='max-w-[1100px] mx-auto relative'>
@@ -30,13 +48,13 @@ export function ProductPage({ product, setProduct, setCart }) {
 				variants={variantsHeader}
 				initial='hidden'
 				animate='show'
-				className='text-primary font-shadow absolute top-10 right-0 text-10xl font-bold uppercase'
+				className='h-36 text-primary font-shadow absolute top-10 right-0 text-10xl font-bold uppercase'
 			>
 				{product.name}
 			</motion.h1>
 			<div className='flex justify-start'>
 				<img src={`images/${product.images[selectedImage]}`} alt='' className='w-121.75 h-147.5' />
-				<div className='w-full flex flex-col ml-8 mt-56 z-10 justify-between'>
+				<div className='w-full flex flex-col ml-8 mt-56 justify-between'>
 					<motion.div key={product.id} variants={variantsSelector} initial='hidden' animate='show'>
 						<ProductSelector data={productData} product={product} setProduct={setProduct} />
 						<ProductPack product={product} quantity={quantity} setQuantity={setQuantity} />
@@ -51,7 +69,7 @@ export function ProductPage({ product, setProduct, setCart }) {
 								variants={variantsButton}
 								initial='hidden'
 								animate='show'
-								onClick={() => setCart((prev) => prev + 1)}
+								onClick={addToCart}
 								className='w-56 mt-12 pb-4 pt-5 text-xs uppercase font-medium border-2 border-text rounded-full '
 							>
 								Add to cart
