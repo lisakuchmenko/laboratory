@@ -83,6 +83,9 @@ module.exports = {
 			75: '300px',
 			262.5: '1050px',
 		},
+		minWidth: {
+			121.75: '487px',
+		},
 	},
 	plugins: [],
 };

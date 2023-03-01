@@ -39,3 +39,7 @@ body {
 .image-position {
 	object-position: 50% 100%;
 }
+
+.image-position-higher {
+	object-position: 50% 90%;
+}

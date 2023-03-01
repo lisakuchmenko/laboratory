@@ -38,7 +38,10 @@ export function ProductPage({ product, setProduct, setCart, setOpenCart }) {
 			}
 			return [...prev, { product, quantity: 1, bagSize: product.price[quantity].quantity }];
 		});
-		setOpenCart(true);
+
+		setTimeout(() => {
+			setOpenCart(true);
+		}, 500);
 	};
 
 	return (
@@ -53,7 +56,11 @@ export function ProductPage({ product, setProduct, setCart, setOpenCart }) {
 				{product.name}
 			</motion.h1>
 			<div className='flex justify-start'>
-				<img src={`images/${product.images[selectedImage]}`} alt='' className='w-121.75 h-147.5' />
+				<img
+					src={`images/${product.images[selectedImage]}`}
+					alt=''
+					className='w-121.75 min-w-121.75 h-147.5 object-cover'
+				/>
 				<div className='w-full flex flex-col ml-8 mt-56 justify-between'>
 					<motion.div key={product.id} variants={variantsSelector} initial='hidden' animate='show'>
 						<ProductSelector data={productData} product={product} setProduct={setProduct} />

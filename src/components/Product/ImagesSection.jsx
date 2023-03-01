@@ -22,7 +22,7 @@ export function ImagesSection({ images, selectedImage, setSelectedImage, id }) {
 						)}
 						onClick={() => setSelectedImage(i)}
 					>
-						<img src={`images/${el}`} alt='' className='w-full h-full object-cover rounded-xs' />
+						<img src={`images/${el}`} alt='' className='w-full h-full object-cover image-position-higher rounded-xs' />
 					</div>
 				);
 			})}

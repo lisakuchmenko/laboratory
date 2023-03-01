@@ -34,7 +34,7 @@ export function Header({ cart, openCart, setCart, setOpenCart }) {
 					TALA
 				</h2>
 				<div className='flex w-25 justify-between relative'>
-					<div className='flex relative'>
+					<div onClick={() => setOpenCart(true)} className='flex relative'>
 						<div className='mr-2'>CART</div>
 						<span className='inline-block w-4'>{sumOfItems}</span>
 						{openCart && <Cart cart={cart} setCart={setCart} openCart={openCart} setOpenCart={setOpenCart} />}
