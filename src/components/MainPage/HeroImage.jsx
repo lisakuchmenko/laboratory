@@ -1,25 +1,34 @@
 import { useRef, useEffect, useState } from 'react';
+import { useScroll, useMotionValueEvent } from 'framer-motion';
+
+const MAX_SCROLL_FOR_FULL = 558;
+const MAX_PADDING = (window.innerWidth - 1050) / 2;
 
 export function HeroImage() {
-	const [width, setWidth] = useState(1050);
-	const ref = useRef(null);
+	const imageContainerRef = useRef(null);
 
-	// change image width on scroll
+	const getHorizontalPadding = (hzPadding, sizeUnit = 'px') => {
+		return '0 ' + hzPadding + sizeUnit;
+	};
+
 	useEffect(() => {
-		const handleScroll = () => {
-			if (window.scrollY > 500) {
-				setWidth(1050 - window.scrollY / 2);
-			} else {
-				setWidth(1050);
-			}
+		if (imageContainerRef.current) {
+			imageContainerRef.current.style.paddingLeft = `${MAX_PADDING}px`;
+			imageContainerRef.current.style.paddingRight = `${MAX_PADDING}px`;
+		}
+		const scrollListener = () => {
+			const scroll = window.scrollY;
+			const percent = 100 - (scroll >= MAX_SCROLL_FOR_FULL ? 100 : scroll / (MAX_SCROLL_FOR_FULL / 100));
+			const padding = MAX_PADDING * (percent / 100);
+			imageContainerRef.current.style.padding = getHorizontalPadding(padding);
 		};
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
+		window.addEventListener('scroll', scrollListener);
+		return () => window.removeEventListener('scroll', scrollListener);
 	}, []);
 
 	return (
-		<div className=' mx-auto' style={{ maxWidth: width + 'px' }}>
-			<img ref={ref} src='/images/hero-bg-mango.png' alt='' />
+		<div ref={imageContainerRef} className='flex justify-center align-center'>
+			<img className='w-full' src='/images/hero-bg-mango.png' alt='' />
 		</div>
 	);
 }
