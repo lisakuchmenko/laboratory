@@ -1,8 +1,9 @@
 import { HeroImage } from './HeroImage';
+import { HeroText } from './HeroText';
 
 export function Hero() {
 	return (
-		<div className='h-auto w-full  mt-10 pb-120 text-light'>
+		<div className='h-auto w-full mt-10 text-light'>
 			<div className='max-w-262.5 mx-auto my-20'>
 				<h1 className='text-9xl font-bold h-full '>
 					TALA<span className='inline-block text-5xl align-top ml-1 mt-4'>Ⓡ</span>
@@ -18,6 +19,7 @@ export function Hero() {
 				</div>
 			</div>
 			<HeroImage />
+			<HeroText />
 		</div>
 	);
 }

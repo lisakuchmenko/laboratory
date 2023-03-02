@@ -1,1 +1,2 @@
-export { Hero } from './Hero';
+export { Hero } from './Hero/Hero';
+export { AvailableIn } from './AvailableIn/AvailableIn';
