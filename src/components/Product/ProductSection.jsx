@@ -12,10 +12,14 @@ import {
 	variantsDescription,
 	variantsImagesSection,
 } from './animations';
+import { useAppContext } from '../Context';
 
-export function ProductSection({ product, setProduct, setCart, setOpenCart }) {
+export function ProductSection() {
+	const { product, setProduct, setCart, setOpenCart } = useAppContext();
 	const [selectedImage, setSelectedImage] = useState(0);
 	const [quantity, setQuantity] = useState(0);
+
+	console.log(product);
 
 	useEffect(() => {
 		setSelectedImage(0);

@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import { useAppContext } from '../Context';
 
-export function Ingredients({ product }) {
+export function Ingredients() {
+	const { product } = useAppContext();
 	return (
 		<motion.div
 			className='h-140 flex items-center justify-center text-3xl'
@@ -21,7 +23,7 @@ export function Ingredients({ product }) {
 				}}
 			>
 				<h2>Ingredient(s):</h2>
-				<h3 className='italic capitalize'>{product}</h3>
+				<h3 className='italic capitalize'>{product.name}</h3>
 			</motion.div>
 		</motion.div>
 	);

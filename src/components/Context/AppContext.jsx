@@ -6,6 +6,7 @@ export const AppContext = createContext(null);
 export const AppContextProvider = ({ children }) => {
 	const { pathname } = useLocation();
 	const productName = pathname.split('/')[2];
+	console.log(productName);
 
 	// get product data from productData array
 	const [product, setProduct] = useState(productData.find((el) => el.name === productName) || productData[0]);

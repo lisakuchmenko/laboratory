@@ -44,3 +44,25 @@ body {
 .image-position-higher {
 	object-position: 50% 90%;
 }
+
+.mango-link:hover .follow-img {
+	opacity: 1;
+}
+
+.follow-img {
+	opacity: 0;
+	width: 100%;
+	height: auto;
+	max-width: 120px;
+	box-sizing: border-box;
+	transition: ease 0.2s;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	/* z-index: -1; */
+	object-fit: cover;
+	rotate: 35deg;
+}
+
+.link {
+	z-index: 2;
+}

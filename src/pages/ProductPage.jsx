@@ -18,7 +18,7 @@ export default function ProductPage() {
 			<Header cart={cart} setCart={setCart} openCart={openCart} setOpenCart={setOpenCart} setOpenMenu={setOpenMenu} />
 			<ProductSection product={product} setProduct={setProduct} setCart={setCart} setOpenCart={setOpenCart} />
 			<HorizontalScrollText />
-			<Ingredients product={product.name} />
+			<Ingredients />
 			<TasteSection />
 			<ComparingSection />
 			<NutritionFacts />
