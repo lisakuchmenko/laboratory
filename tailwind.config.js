@@ -67,7 +67,7 @@ module.exports = {
 			},
 		},
 		colors: {
-			primary: '#272028',
+			primary: '#232025',
 			text: '#D6CDC4',
 			product: {
 				0: '#f3a104',

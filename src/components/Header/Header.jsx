@@ -3,9 +3,11 @@ import { List } from 'react-bootstrap-icons';
 import { Cart } from '../Cart';
 import { Menu } from '../Menu';
 import { useAppContext } from '../Context';
+import { useLocation } from 'react-router-dom';
 
 export function Header({ cart, openCart, setCart, setOpenCart }) {
-	const [color, setColor] = useState(false);
+	const { pathname } = useLocation();
+	const [color, setColor] = useState(pathname === '/');
 	const { openMenu, setOpenMenu } = useAppContext();
 
 	const changeColor = () => {
@@ -13,8 +15,10 @@ export function Header({ cart, openCart, setCart, setOpenCart }) {
 	};
 
 	useEffect(() => {
-		window.addEventListener('scroll', changeColor);
-		return () => window.removeEventListener('scroll', changeColor);
+		if (pathname !== '/') {
+			window.addEventListener('scroll', changeColor);
+			return () => window.removeEventListener('scroll', changeColor);
+		}
 	}, []);
 
 	const scrollToTop = () => {

@@ -42,7 +42,7 @@ export function Menu({ setOpenMenu }) {
 							);
 						})}
 					</div>
-					<div className='text-xl'>
+					<div className='text-xl cursor-pointer'>
 						<div className='mb-2'>About</div>
 						<div className='mb-2'>FAQs</div>
 						<div>Contact</div>
