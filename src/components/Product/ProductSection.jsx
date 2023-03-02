@@ -3,19 +3,17 @@ import { ProductInfo } from './ProductInfo';
 import { ProductSelector } from './ProductSelector';
 import { productData } from '../../data';
 import { ImagesSection } from './ImagesSection';
-import { Cart } from '../Cart';
 import { ProductPack } from './ProductPack';
 import { motion } from 'framer-motion';
 import {
 	variantsHeader,
-	variantsMainImage,
 	variantsSelector,
 	variantsButton,
 	variantsDescription,
 	variantsImagesSection,
 } from './animations';
 
-export function ProductPage({ product, setProduct, setCart, setOpenCart }) {
+export function ProductSection({ product, setProduct, setCart, setOpenCart }) {
 	const [selectedImage, setSelectedImage] = useState(0);
 	const [quantity, setQuantity] = useState(0);
 
