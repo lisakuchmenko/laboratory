@@ -1,9 +1,12 @@
 import { useState, useEffect, useMemo } from 'react';
 import { List } from 'react-bootstrap-icons';
 import { Cart } from '../Cart';
+import { Menu } from '../Menu';
+import { useAppContext } from '../Context';
 
-export function Header({ cart, openCart, setCart, setOpenCart, setOpenMenu }) {
+export function Header({ cart, openCart, setCart, setOpenCart }) {
 	const [color, setColor] = useState(false);
+	const { openMenu, setOpenMenu } = useAppContext();
 
 	const changeColor = () => {
 		window.scrollY > 500 ? setColor(true) : setColor(false);
@@ -28,22 +31,31 @@ export function Header({ cart, openCart, setCart, setOpenCart, setOpenMenu }) {
 	}, [cart]);
 
 	return (
-		<header className='fixed w-full z-10 top-12 text-xxs'>
-			<div className='max-w-262.5 mx-auto flex justify-between items-center'>
-				<h2 onClick={scrollToTop} className={`tracking-widest cursor-pointer ${color ? 'text-text' : 'text-primary'}`}>
-					TALA
-				</h2>
-				<div className='flex w-25 justify-between relative'>
-					<div onClick={() => setOpenCart(true)} className='flex relative cursor-pointer'>
-						<div className='mr-2'>CART</div>
-						<span className='inline-block w-4'>{sumOfItems}</span>
-						{openCart && <Cart cart={cart} setCart={setCart} openCart={openCart} setOpenCart={setOpenCart} />}
+		<>
+			{openMenu ? (
+				<Menu setOpenMenu={setOpenMenu} />
+			) : (
+				<header className='fixed w-full z-10 top-12 text-xxs'>
+					<div className='max-w-262.5 mx-auto flex justify-between items-center'>
+						<h2
+							onClick={scrollToTop}
+							className={`tracking-widest cursor-pointer ${color ? 'text-text' : 'text-primary'}`}
+						>
+							TALA
+						</h2>
+						<div className='flex w-25 justify-between relative'>
+							<div onClick={() => setOpenCart(true)} className='flex relative cursor-pointer'>
+								<div className='mr-2'>CART</div>
+								<span className='inline-block w-4'>{sumOfItems}</span>
+								{openCart && <Cart cart={cart} setCart={setCart} openCart={openCart} setOpenCart={setOpenCart} />}
+							</div>
+							<div className='cursor-pointer' onClick={() => setOpenMenu(true)}>
+								<List />
+							</div>
+						</div>
 					</div>
-					<div className='cursor-pointer' onClick={() => setOpenMenu(true)}>
-						<List />
-					</div>
-				</div>
-			</div>
-		</header>
+				</header>
+			)}
+		</>
 	);
 }
