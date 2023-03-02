@@ -15,7 +15,7 @@ export default function ProductPage() {
 	return (
 		<div className='bg-primary max-w-screen pt-8 font-sportingGrotesque text-text'>
 			{openMenu && <Menu setOpenMenu={setOpenMenu} />}
-			<Header />
+			<Header cart={cart} setCart={setCart} openCart={openCart} setOpenCart={setOpenCart} setOpenMenu={setOpenMenu} />
 			<ProductSection product={product} setProduct={setProduct} setCart={setCart} setOpenCart={setOpenCart} />
 			<HorizontalScrollText />
 			<Ingredients product={product.name} />
