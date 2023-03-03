@@ -37,8 +37,32 @@ export function ScrollSection() {
 				<div className='transparent-text'>ONE</div>
 				<div>ONE</div>
 				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
 			</div>
 			<div ref={secondLineRef} className='flex text-8xl font-bold h-25 absolute top-25'>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
 				<div>ONE</div>
 				<div className='transparent-text'>ONE</div>
 				<div>ONE</div>
@@ -65,8 +89,32 @@ export function ScrollSection() {
 				<div className='transparent-text'>ONE</div>
 				<div>ONE</div>
 				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
 			</div>
 			<div ref={fourthLineRef} className='flex text-8xl font-bold h-25 absolute top-[300px] '>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
 				<div>ONE</div>
 				<div className='transparent-text'>ONE</div>
 				<div>ONE</div>
@@ -93,8 +141,32 @@ export function ScrollSection() {
 				<div className='transparent-text'>ONE</div>
 				<div>ONE</div>
 				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
 			</div>
 			<div ref={sixthLineRef} className='flex text-8xl font-bold h-25 absolute top-[500px] '>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
+				<div>ONE</div>
+				<div className='transparent-text'>ONE</div>
 				<div>ONE</div>
 				<div className='transparent-text'>ONE</div>
 				<div>ONE</div>
