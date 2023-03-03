@@ -1,4 +1,4 @@
-import { useInView, motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { useInView, motion } from 'framer-motion';
 import { useRef } from 'react';
 
 export function TextSection() {

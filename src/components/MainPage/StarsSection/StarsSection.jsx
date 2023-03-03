@@ -17,7 +17,7 @@ export function StarsSection() {
 			let y = randRange(1, 1000) / 10;
 			let op = randRange(2, 5) / 10;
 			let s = randRange(100, 300) / 100;
-			let size = randRange(0.1, 1) + 'px';
+			let size = randRange(0.5, 1) + 'px';
 			let glow = randRange(0.5, 1);
 			let animationDuration = randRange(4000, 6000) + 'ms';
 			let boxShadow = '0px 0px ' + glow + 'px ' + glow / 1.6 + 'px rgba(255, 255, 255, 0.3)';
