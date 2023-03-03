@@ -28,7 +28,7 @@ export function TasteSection() {
 	return (
 		<motion.div
 			ref={starRef}
-			className='h-160 w-full overflow-hidden relative'
+			className='h-screen w-full overflow-hidden relative'
 			initial={{ opacity: 0 }}
 			whileInView={{
 				opacity: 1,

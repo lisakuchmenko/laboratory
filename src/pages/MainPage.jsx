@@ -1,6 +1,6 @@
 import { Header } from '../components/Header';
 import { useAppContext } from '../components/Context';
-import { Hero, AvailableIn, TextSection } from '../components/MainPage';
+import { Hero, AvailableIn, TextSection, StarsSection } from '../components/MainPage';
 
 export default function MainPage() {
 	const { cart, setCart, openCart, setOpenCart, setOpenMenu } = useAppContext();
@@ -10,6 +10,7 @@ export default function MainPage() {
 			<Hero />
 			<AvailableIn />
 			<TextSection />
+			<StarsSection />
 		</div>
 	);
 }

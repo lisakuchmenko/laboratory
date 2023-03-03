@@ -8,7 +8,7 @@ export function TextSection() {
 	const isBoxInView = useInView(boxRef);
 
 	return (
-		<div className='h-full w-full pb-72'>
+		<div className='h-full w-full mb-1'>
 			<div className='max-w-262.5 mx-auto mb-10'>
 				<motion.h2
 					ref={headingRef}
@@ -92,7 +92,7 @@ export function TextSection() {
 						delay: 0.5,
 					},
 				}}
-				className='h-2 border-t border-dotted '
+				className='h-px border-t border-dotted '
 			></motion.div>
 		</div>
 	);
