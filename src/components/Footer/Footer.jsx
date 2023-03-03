@@ -1,5 +1,5 @@
 export function Footer() {
-	const sections = ['Mango', 'Banana', 'Pineapple', 'Pitahaya', 'Variety', 'Sampler'];
+	const sections = ['Mango', 'Banana', 'Pineapple'];
 	return (
 		<div className='h-auto max-w-262.5 mx-auto pb-20'>
 			<div className='w-full h-28 flex justify-between items-end'>
