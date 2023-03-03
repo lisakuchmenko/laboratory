@@ -4,7 +4,7 @@ import { SmileyFace } from './SmileyFace';
 
 export function StarsSection() {
 	const starRef = useRef(null);
-	const starcount = 400;
+	const starcount = 500;
 
 	const randRange = (min, max) => {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -17,7 +17,11 @@ export function StarsSection() {
 			let y = randRange(1, 1000) / 10;
 			let op = randRange(2, 5) / 10;
 			let s = randRange(100, 300) / 100;
-			html += `<div class="star" style="--x:${x}; --y:${y}; --opacity:${op}; --scale:${s};"></div>`;
+			let size = randRange(0.1, 1) + 'px';
+			let glow = randRange(0.5, 1);
+			let animationDuration = randRange(4000, 6000) + 'ms';
+			let boxShadow = '0px 0px ' + glow + 'px ' + glow / 1.6 + 'px rgba(255, 255, 255, 0.3)';
+			html += `<div class="star" style="--x:${x}; --y:${y}; --opacity:${op}; --scale:${s}; --width:${size}; --height:${size}; --boxShadow:${boxShadow}; --animationDuration:${animationDuration}"></div>`;
 		}
 		starRef.current.innerHTML += html;
 	};
