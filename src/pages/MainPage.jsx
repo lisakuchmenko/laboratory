@@ -1,6 +1,6 @@
 import { Header } from '../components/Header';
 import { useAppContext } from '../components/Context';
-import { Hero, AvailableIn, TextSection, StarsSection, IngredientsNumber } from '../components/MainPage';
+import { Hero, AvailableIn, TextSection, StarsSection, IngredientsNumber, ScrollSection } from '../components/MainPage';
 import { Footer } from '../components/Footer';
 
 export default function MainPage() {
@@ -13,6 +13,7 @@ export default function MainPage() {
 			<TextSection />
 			<StarsSection />
 			<IngredientsNumber />
+			<ScrollSection />
 			<Footer />
 		</div>
 	);
