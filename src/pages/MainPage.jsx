@@ -1,6 +1,6 @@
 import { Header } from '../components/Header';
 import { useAppContext } from '../components/Context';
-import { Hero, AvailableIn } from '../components/MainPage';
+import { Hero, AvailableIn, TextSection } from '../components/MainPage';
 
 export default function MainPage() {
 	const { cart, setCart, openCart, setOpenCart, setOpenMenu } = useAppContext();
@@ -9,6 +9,7 @@ export default function MainPage() {
 			<Header cart={cart} setCart={setCart} openCart={openCart} setOpenCart={setOpenCart} setOpenMenu={setOpenMenu} />
 			<Hero />
 			<AvailableIn />
+			<TextSection />
 		</div>
 	);
 }

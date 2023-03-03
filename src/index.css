@@ -45,17 +45,33 @@ body {
 	object-position: 50% 90%;
 }
 
-.mango-link:hover .follow-img {
+.mango-link:hover .follow-img,
+.banana-link:hover .follow-img,
+.pineapple-link:hover .follow-img {
 	opacity: 1;
 }
 
+.mango-link:hover,
+.banana-link:hover,
+.pineapple-link:hover {
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 1px;
+	z-index: 2;
+	transition: ease-out 1s;
+}
+
+.mango-link:hover .hovered,
+.banana-link:hover .hovered,
+.pineapple-link:hover .hovered {
+	opacity: 1;
+	transition: ease-out 1s;
+}
 .follow-img {
 	opacity: 0;
-	width: 100%;
 	height: auto;
-	max-width: 120px;
+	width: 100px;
 	box-sizing: border-box;
-	transition: ease 0.2s;
+	transition: ease 0.5s;
 	position: absolute;
 	transform: translate(-50%, -50%);
 	/* z-index: -1; */
@@ -63,6 +79,6 @@ body {
 	rotate: 35deg;
 }
 
-.link {
-	z-index: 2;
+.line-style {
+	transform-origin: 100% 0%;
 }

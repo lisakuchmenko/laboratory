@@ -1,6 +1,7 @@
 import { useInView, motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Arrow } from './Arrow';
 
 export function AvailableIn() {
 	const ref = useRef(null);
@@ -12,28 +13,19 @@ export function AvailableIn() {
 	useMotionValueEvent(scrollY, 'change', (latest) => {
 		setScrollPosition(latest);
 	});
-	// follow cursor
+
 	// useEffect(() => {
 	// 	const cursor = cursorRef.current;
-	// 	const follow = (e) => {
-	// 		// cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-	// 		cursor.style.top = `${e.clientY}px`;
-	// 		cursor.style.left = `${e.clientX}px`;
+	// 	const handleMouseMove = (e) => {
+	// 		cursor.style.left = e.clientX + 'px';
+	// 		cursor.style.top = e.clientY + 'px';
 	// 	};
-	// 	window.addEventListener('mousemove', follow);
-	// 	return () => window.removeEventListener('mousemove', follow);
+	// 	window.addEventListener('mousemove', handleMouseMove);
+	// 	return () => window.removeEventListener('mousemove', handleMouseMove);
 	// }, []);
 
-	document.addEventListener('mousemove', (e) => {
-		var x = e.clientX;
-		var y = e.clientY;
-
-		cursorRef.current.style.left = `${x}px`;
-		cursorRef.current.style.top = `${y}px`;
-	});
-
 	return (
-		<div ref={ref} className='h-full max-w-262.5 mx-auto pb-75'>
+		<div ref={ref} className='h-full max-w-262.5 mx-auto pb-48 relative '>
 			<motion.div
 				animate={{
 					width: isInView ? '100%' : '0%',
@@ -43,7 +35,7 @@ export function AvailableIn() {
 						delay: 0.1,
 					},
 				}}
-				className='mt-10 h-2 border-t border-dotted relative'
+				className='mt-6 h-2 border-t border-dotted '
 			>
 				<motion.div
 					animate={{
@@ -60,52 +52,69 @@ export function AvailableIn() {
 					available in
 				</motion.div>
 			</motion.div>
-			<div className='text-5xl font-bold'>
-				<div className='mango-link relative  '>
+			<div className='text-5xl font-bold '>
+				<div className='mango-link flex justify-between items-center'>
 					<motion.div
 						animate={{
-							transform: scrollPosition > 1500 ? 'translateY(-4px)' : 'translateY(20px)',
-							opacity: scrollPosition > 1500 ? 1 : 0,
+							transform: scrollPosition > 1470 ? 'translateY(-4px)' : 'translateY(20px)',
+							opacity: scrollPosition > 1470 ? 1 : 0,
 							transition: {
 								type: 'easeInOut',
 								duration: 0.5,
 								delay: 0.3,
 							},
 						}}
-						className='mt-8 link'
+						className='mt-4 link cursor-pointer'
 					>
+						<span className='inline-block mr-32 align-middle text-xxs'>01</span>
 						MANGO
 					</motion.div>
-					<img ref={cursorRef} src='/images/cursor-pack.png' className='follow-img ' />
+					<div className='opacity-0 hovered'>
+						<Arrow />
+					</div>
+					{/* <img ref={cursorRef} src='/images/cursor-mango.png' className='follow-img ' /> */}
 				</div>
-				<motion.div
-					animate={{
-						transform: scrollPosition > 1600 ? 'translateY(-4px)' : 'translateY(20px)',
-						opacity: scrollPosition > 1600 ? 1 : 0,
-						transition: {
-							type: 'easeInOut',
-							duration: 0.5,
-							delay: 0.3,
-						},
-					}}
-					className='mt-8'
-				>
-					BANANA
-				</motion.div>
-				<motion.div
-					animate={{
-						transform: scrollPosition > 1700 ? 'translateY(-4px)' : 'translateY(20px)',
-						opacity: scrollPosition > 1700 ? 1 : 0,
-						transition: {
-							type: 'easeInOut',
-							duration: 0.5,
-							delay: 0.3,
-						},
-					}}
-					className='mt-8'
-				>
-					PINEAPPLE
-				</motion.div>
+				<div className='banana-link flex justify-between items-center'>
+					<motion.div
+						animate={{
+							transform: scrollPosition > 1600 ? 'translateY(-4px)' : 'translateY(20px)',
+							opacity: scrollPosition > 1600 ? 1 : 0,
+							transition: {
+								type: 'easeInOut',
+								duration: 0.5,
+								delay: 0.3,
+							},
+						}}
+						className='mt-4'
+					>
+						<span className='inline-block mr-32 align-middle text-xxs'>02</span>
+						BANANA
+					</motion.div>
+					<div className='opacity-0 hovered'>
+						<Arrow />
+					</div>
+					{/* <img ref={cursorRef} src='/images/cursor-banana.png' className='follow-img ' /> */}
+				</div>
+				<div className='pineapple-link flex justify-between items-center'>
+					<motion.div
+						animate={{
+							transform: scrollPosition > 1700 ? 'translateY(-4px)' : 'translateY(20px)',
+							opacity: scrollPosition > 1700 ? 1 : 0,
+							transition: {
+								type: 'easeInOut',
+								duration: 0.5,
+								delay: 0.3,
+							},
+						}}
+						className='mt-4'
+					>
+						<span className='inline-block mr-32 align-middle text-xxs'>03</span>
+						PINEAPPLE
+					</motion.div>
+					<div className='opacity-0 hovered'>
+						<Arrow />
+					</div>
+				</div>
 			</div>
 		</div>
 	);
