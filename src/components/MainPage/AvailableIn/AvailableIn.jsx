@@ -67,7 +67,7 @@ export function AvailableIn() {
 						className='mt-4 link cursor-pointer'
 					>
 						<span className='inline-block mr-32 align-middle text-xxs'>01</span>
-						MANGO
+						<Link to='/product/mango'>MANGO</Link>
 					</motion.div>
 					<div className='opacity-0 hovered'>
 						<Arrow />
@@ -88,7 +88,7 @@ export function AvailableIn() {
 						className='mt-4'
 					>
 						<span className='inline-block mr-32 align-middle text-xxs'>02</span>
-						BANANA
+						<Link to='/product/banana'>BANANA</Link>
 					</motion.div>
 					<div className='opacity-0 hovered'>
 						<Arrow />
@@ -109,7 +109,7 @@ export function AvailableIn() {
 						className='mt-4'
 					>
 						<span className='inline-block mr-32 align-middle text-xxs'>03</span>
-						PINEAPPLE
+						<Link to='/product/pineapple'>PINEAPPLE</Link>
 					</motion.div>
 					<div className='opacity-0 hovered'>
 						<Arrow />

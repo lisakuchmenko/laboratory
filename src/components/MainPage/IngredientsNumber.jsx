@@ -17,7 +17,7 @@ export function IngredientsNumber() {
 					opacity: isInView ? 1 : 0,
 					transition: {
 						type: 'spring',
-						// duration: 0.6,
+	
 						stiffness: 50,
 						delay: 0.3,
 					},
@@ -32,7 +32,6 @@ export function IngredientsNumber() {
 					opacity: isSecondLineInView ? 1 : 0,
 					transition: {
 						type: 'spring',
-						// duration: 0.6,
 						stiffness: 50,
 						delay: 0.35,
 					},

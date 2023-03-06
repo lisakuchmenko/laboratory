@@ -23,7 +23,7 @@ export function Ingredients() {
 				}}
 			>
 				<h2>Ingredient(s):</h2>
-				<h3 className='italic capitalize'>{product.name}</h3>
+				<h3 className='italic capitalize'>{product?.name}</h3>
 			</motion.div>
 		</motion.div>
 	);
