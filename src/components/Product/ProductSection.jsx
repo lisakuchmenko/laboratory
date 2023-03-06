@@ -23,10 +23,6 @@ export function ProductSection() {
 		setSelectedImage(0);
 	}, [product?.id]);
 
-	useEffect(() => {
-		console.log(product);
-	}, [product]);
-
 	const addToCart = () => {
 		setCart((prev) => {
 			const productInCart = prev.find(
@@ -66,7 +62,7 @@ export function ProductSection() {
 					</motion.h1>
 					<div className='flex justify-start'>
 						<img
-							src={`images/${product.images[selectedImage]}`}
+							src={`/images/${product.images[selectedImage]}`}
 							alt=''
 							className='w-121.75 min-w-121.75 h-147.5 object-cover'
 						/>
@@ -92,12 +88,7 @@ export function ProductSection() {
 									</motion.button>
 								</div>
 								<motion.div key={product.id} variants={variantsImagesSection} initial='hidden' animate='show'>
-									<ImagesSection
-										images={product.images}
-										selectedImage={selectedImage}
-										setSelectedImage={setSelectedImage}
-										id={product.id}
-									/>
+									<ImagesSection selectedImage={selectedImage} setSelectedImage={setSelectedImage} />
 								</motion.div>
 							</div>
 						</div>

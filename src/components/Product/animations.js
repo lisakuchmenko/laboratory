@@ -18,7 +18,7 @@ export const variantsMainImage = {
 };
 
 export const variantsSelector = {
-	hidden: { opacity: 0, y: 20 },
+	hidden: { opacity: 0, y: 50 },
 	show: {
 		opacity: 1,
 		y: 0,
@@ -27,7 +27,7 @@ export const variantsSelector = {
 };
 
 export const variantsButton = {
-	hidden: { opacity: 0, y: 20 },
+	hidden: { opacity: 0, y: 50 },
 	show: {
 		opacity: 1,
 		y: 0,
@@ -36,7 +36,7 @@ export const variantsButton = {
 };
 
 export const variantsDescription = {
-	hidden: { opacity: 0, y: 20 },
+	hidden: { opacity: 0, y: 50 },
 	show: {
 		opacity: 1,
 		y: 0,
@@ -45,7 +45,7 @@ export const variantsDescription = {
 };
 
 export const variantsImagesSection = {
-	hidden: { opacity: 0, y: 30 },
+	hidden: { opacity: 0, y: 50 },
 	show: {
 		opacity: 1,
 		y: 0,
