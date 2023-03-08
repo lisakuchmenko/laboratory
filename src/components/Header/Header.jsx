@@ -39,8 +39,8 @@ export function Header({ cart, openCart, setCart, setOpenCart }) {
 			{openMenu ? (
 				<Menu setOpenMenu={setOpenMenu} />
 			) : (
-				<header className='fixed w-full z-10 top-12 text-xxs'>
-					<div className='max-w-262.5 mx-auto flex justify-between items-center'>
+				<header className='fixed w-screen sm:w-full z-10 top-12 text-xs'>
+					<div className='max-w-90 sm:max-w-262.5 mx-auto flex justify-between items-center'>
 						<h2
 							onClick={scrollToTop}
 							className={`tracking-widest cursor-pointer ${color ? 'text-text' : 'text-primary'}`}

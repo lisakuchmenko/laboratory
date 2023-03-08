@@ -3,8 +3,8 @@ import { HeroText } from './HeroText';
 
 export function Hero() {
 	return (
-		<div className='h-auto w-full mt-10 text-light'>
-			<div className='max-w-90 sm:max-w-262.5 mx-auto my-20'>
+		<div className='h-auto w-full mt-10 xs:mt-10 text-light'>
+			<div className='max-w-90 sm:max-w-262.5 mx-auto my-28'>
 				<h1 className='text-7.5xl text-center sm:text-left sm:text-9xl font-bold h-full '>
 					TALA<span className='inline-block text-4xl sm:text-5xl align-top ml-1 mt-3 sm:mt-4'>Ⓡ</span>
 				</h1>
