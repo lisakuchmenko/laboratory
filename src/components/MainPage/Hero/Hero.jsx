@@ -1,6 +1,3 @@
-import { HeroImage } from './HeroImage';
-import { HeroText } from './HeroText';
-
 export function Hero() {
 	return (
 		<div className='h-auto w-full mt-10 xs:mt-10 text-light'>
@@ -18,8 +15,6 @@ export function Hero() {
 					</div>
 				</div>
 			</div>
-			<HeroImage />
-			<HeroText />
 		</div>
 	);
 }

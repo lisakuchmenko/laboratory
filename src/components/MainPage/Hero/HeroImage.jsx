@@ -2,7 +2,8 @@ import { useRef, useEffect, useState } from 'react';
 import { useScroll, useMotionValueEvent } from 'framer-motion';
 
 const MAX_SCROLL_FOR_FULL = 558;
-const MAX_PADDING = (window.innerWidth - 1050) / 2;
+const MAX_PADDING = (window.innerWidth - (window.innerWidth > 650 ? 1050 : 360)) / 2;
+console.log(MAX_PADDING);
 
 export function HeroImage() {
 	const imageContainerRef = useRef(null);
@@ -27,8 +28,8 @@ export function HeroImage() {
 	}, []);
 
 	return (
-		<div ref={imageContainerRef} className='flex justify-center align-center'>
-			<img className='w-full' src='/images/hero-bg-mango.png' alt='' />
+		<div ref={imageContainerRef} className='flex justify-center align-center h-screen'>
+			<img className='w-full object-cover h-[90%]' src='/images/hero-bg-mango.png' alt='' />
 		</div>
 	);
 }
