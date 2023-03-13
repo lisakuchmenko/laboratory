@@ -18,12 +18,12 @@ export function TextSection() {
 						transition: {
 							type: 'easeInOut',
 							duration: 0.8,
-							delay: 0.5,
+							delay: 0.8,
 						},
 					}}
-					className='text-3xl sm:text-6xl font-bold w-40 sm:w-175 mt-10'
+					className='text-5xl sm:text-6xl font-bold w-[360px] sm:w-175 mt-10'
 				>
-					I FINISHED THE BAG & REGRET NOTHING.
+					<span className='inline-block mr-20 sm:mr-0'>I</span> FINISHED THE BAG & REGRET NOTHING.
 				</motion.h2>
 			</div>
 			<motion.div
@@ -38,7 +38,7 @@ export function TextSection() {
 				}}
 				className='mt-6 h-2 border-b border-dotted '
 			></motion.div>
-			<div className='flex-col sm:flex justify-between items-center w-full h-[200px]'>
+			<div className='flex justify-between items-center w-full h-[200px]'>
 				<motion.div
 					ref={boxRef}
 					animate={{
@@ -50,9 +50,9 @@ export function TextSection() {
 							delay: 0.5,
 						},
 					}}
-					className='p-10 text-4xl grow font-bold '
+					className='p-4 sm:p-10 text-xl sm:text-4xl grow font-bold '
 				>
-					SO CRUNCHY I GET NOISE COMPLAINTS.
+					<span className='inline-block mr-10 sm:mr-0'>SO</span> CRUNCHY I GET NOISE COMPLAINTS.
 				</motion.div>
 				<motion.div
 					ref={boxRef}
@@ -77,7 +77,7 @@ export function TextSection() {
 							delay: 0.5,
 						},
 					}}
-					className='p-10 font-bold w-120'
+					className='p-6 sm:p-10 text-xs sm:text-4xl font-bold sm:w-120'
 				>
 					THIS IS WHAT "FRUIT SNACKS" SHOULD HAVE ALWAYS BEEN
 				</motion.div>
