@@ -11,7 +11,8 @@ export function AvailableIn() {
 
 	const { scrollY } = useScroll();
 	useMotionValueEvent(scrollY, 'change', (latest) => {
-		setScrollPosition(latest);
+		setScrollPosition(window.innerWidth < 640 ? latest - window.innerHeight / 3 : latest);
+		console.log(latest - window.innerHeight / 3);
 	});
 
 	// useEffect(() => {
@@ -25,7 +26,7 @@ export function AvailableIn() {
 	// }, []);
 
 	return (
-		<div ref={ref} className='h-full max-w-262.5 mx-auto pb-48 relative '>
+		<div ref={ref} className='h-full max-w-90 sm:max-w-262.5 mx-auto pb-48 relative '>
 			<motion.div
 				animate={{
 					width: isInView ? '100%' : '0%',
@@ -52,21 +53,21 @@ export function AvailableIn() {
 					available in
 				</motion.div>
 			</motion.div>
-			<div className='text-5xl font-bold '>
+			<div className='text-3xl sm:text-5xl font-bold '>
 				<div className='mango-link flex justify-between items-center'>
 					<motion.div
 						animate={{
-							transform: scrollPosition > 1470 ? 'translateY(-4px)' : 'translateY(20px)',
-							opacity: scrollPosition > 1470 ? 1 : 0,
+							transform: scrollPosition > 1490 ? 'translateY(-4px)' : 'translateY(20px)',
+							opacity: scrollPosition > 1490 ? 1 : 0,
 							transition: {
 								type: 'easeInOut',
 								duration: 0.5,
 								delay: 0.3,
 							},
 						}}
-						className='mt-4 link cursor-pointer'
+						className='mt-8 sm:mt-4 link cursor-pointer'
 					>
-						<span className='inline-block mr-32 align-middle text-xxs'>01</span>
+						<span className='inline-block mr-12 sm:mr-32 align-middle text-xxs'>01</span>
 						<Link to='/product/mango'>MANGO</Link>
 					</motion.div>
 					<div className='opacity-0 hovered'>
@@ -85,9 +86,9 @@ export function AvailableIn() {
 								delay: 0.3,
 							},
 						}}
-						className='mt-4'
+						className='mt-8 sm:mt-4'
 					>
-						<span className='inline-block mr-32 align-middle text-xxs'>02</span>
+						<span className='inline-block mr-12 sm:mr-32 align-middle text-xxs'>02</span>
 						<Link to='/product/banana'>BANANA</Link>
 					</motion.div>
 					<div className='opacity-0 hovered'>
@@ -106,9 +107,9 @@ export function AvailableIn() {
 								delay: 0.3,
 							},
 						}}
-						className='mt-4'
+						className='mt-8 sm:mt-4'
 					>
-						<span className='inline-block mr-32 align-middle text-xxs'>03</span>
+						<span className='inline-block mr-12 sm:mr-32 align-middle text-xxs'>03</span>
 						<Link to='/product/pineapple'>PINEAPPLE</Link>
 					</motion.div>
 					<div className='opacity-0 hovered'>
