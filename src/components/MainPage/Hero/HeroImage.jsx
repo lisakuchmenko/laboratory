@@ -3,7 +3,6 @@ import { useScroll, useMotionValueEvent } from 'framer-motion';
 
 const MAX_SCROLL_FOR_FULL = 558;
 const MAX_PADDING = (window.innerWidth - (window.innerWidth > 650 ? 1050 : 360)) / 2;
-console.log(MAX_PADDING);
 
 export function HeroImage() {
 	const imageContainerRef = useRef(null);

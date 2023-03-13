@@ -9,7 +9,7 @@ export function TextSection() {
 
 	return (
 		<div className='h-full w-full mb-1'>
-			<div className='max-w-262.5 mx-auto mb-10'>
+			<div className='max-w-90 sm:max-w-262.5 mx-auto mb-10'>
 				<motion.h2
 					ref={headingRef}
 					animate={{
@@ -21,7 +21,7 @@ export function TextSection() {
 							delay: 0.5,
 						},
 					}}
-					className='text-6xl font-bold w-175 mt-10'
+					className='text-3xl sm:text-6xl font-bold w-40 sm:w-175 mt-10'
 				>
 					I FINISHED THE BAG & REGRET NOTHING.
 				</motion.h2>
@@ -38,7 +38,7 @@ export function TextSection() {
 				}}
 				className='mt-6 h-2 border-b border-dotted '
 			></motion.div>
-			<div className='flex justify-between items-center w-full h-[200px]'>
+			<div className='flex-col sm:flex justify-between items-center w-full h-[200px]'>
 				<motion.div
 					ref={boxRef}
 					animate={{
