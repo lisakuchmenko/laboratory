@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 export function ImagesCarousel() {
-	const { product, selectedImage, setSelectedImage } = useAppContext();
+	const { product } = useAppContext();
 	console.log(product.images);
 
 	return (
