@@ -9,7 +9,7 @@ export function IngredientsNumber() {
 	const isSecondLineInView = useInView(secondLine);
 
 	return (
-		<div className='w-full h-screen text-2xl flex flex-col justify-center items-center '>
+		<div className='w-full h-110 sm:h-screen text-2xl flex flex-col justify-center items-center '>
 			<motion.div
 				ref={firstLine}
 				animate={{
@@ -17,7 +17,7 @@ export function IngredientsNumber() {
 					opacity: isInView ? 1 : 0,
 					transition: {
 						type: 'spring',
-	
+
 						stiffness: 50,
 						delay: 0.3,
 					},

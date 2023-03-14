@@ -20,7 +20,7 @@ export function ScrollSection() {
 	};
 
 	return (
-		<div className='w-full h-screen overflow-hidden mb-64 relative'>
+		<div className='w-full h-screen overflow-hidden mb-0 sm:mb-64 relative'>
 			<div
 				ref={firstLineRef}
 				className='overflow-hidden whitespace-nowrap flex text-8xl font-bold h-25 absolute top-0 '
