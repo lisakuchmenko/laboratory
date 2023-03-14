@@ -18,11 +18,13 @@ export function ImagesCarousel() {
 				clickable: true,
 			}}
 		>
-			{/* {product.images((image) => {
-				<SwiperSlide>
-					<img src={`/images/${image}`} />
-				</SwiperSlide>;
-			})} */}
+			{product.images.map((image) => {
+				return (
+					<SwiperSlide>
+						<img className='image-position-higher' src={`/images/${image}`} />
+					</SwiperSlide>
+				);
+			})}
 		</Swiper>
 	);
 }
