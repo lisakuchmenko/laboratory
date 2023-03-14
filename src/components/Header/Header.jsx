@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 
 export function Header({ cart, openCart, setCart, setOpenCart }) {
 	const { pathname } = useLocation();
-	const [color, setColor] = useState(pathname === '/');
+	const [color, setColor] = useState(pathname === '/' || window.innerWidth < 640);
 	const { openMenu, setOpenMenu } = useAppContext();
 
 	const changeColor = () => {
@@ -15,7 +15,7 @@ export function Header({ cart, openCart, setCart, setOpenCart }) {
 	};
 
 	useEffect(() => {
-		if (pathname !== '/') {
+		if (pathname !== '/' && window.innerWidth > 640) {
 			window.addEventListener('scroll', changeColor);
 			return () => window.removeEventListener('scroll', changeColor);
 		}

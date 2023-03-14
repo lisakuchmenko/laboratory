@@ -9,7 +9,7 @@ export const productData = [
 		],
 		description:
 			'The best mango flavor. Ripe mangoes from asia frozen at their ripest. Crunchy. Vegan. Just guilt free snacking. 12 packs.',
-		images: ['mango0.jpg', 'banana0.jpg', 'mango2.jpeg', 'banana0.jpg', 'mango0.jpg'],
+		images: ['mango0.jpeg', 'mango1.png', 'mango2.png', 'mango3.jpeg', 'mango4.jpeg'],
 	},
 	{
 		id: 2,

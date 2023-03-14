@@ -12,6 +12,7 @@ export const AppContextProvider = ({ children }) => {
 	const [cart, setCart] = useState([]);
 	const [openCart, setOpenCart] = useState(false);
 	const [openMenu, setOpenMenu] = useState(false);
+	const [quantity, setQuantity] = useState(0);
 
 	//refresh page when product is changed
 	useEffect(() => {
@@ -33,6 +34,9 @@ export const AppContextProvider = ({ children }) => {
 
 		openMenu,
 		setOpenMenu,
+
+		quantity,
+		setQuantity,
 	};
 	return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

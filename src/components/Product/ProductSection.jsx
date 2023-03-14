@@ -15,9 +15,8 @@ import {
 import { useAppContext } from '../Context';
 
 export function ProductSection() {
-	const { product, setProduct, setCart, setOpenCart } = useAppContext();
+	const { product, setProduct, setCart, setOpenCart, quantity, setQuantity } = useAppContext();
 	const [selectedImage, setSelectedImage] = useState(0);
-	const [quantity, setQuantity] = useState(0);
 
 	useEffect(() => {
 		setSelectedImage(0);
@@ -69,12 +68,12 @@ export function ProductSection() {
 						<div className='w-full flex flex-col ml-8 mt-56 justify-between'>
 							<motion.div key={product.id} variants={variantsSelector} initial='hidden' animate='show'>
 								<ProductSelector data={productData} product={product} setProduct={setProduct} />
-								<ProductPack product={product} quantity={quantity} setQuantity={setQuantity} />
+								<ProductPack />
 							</motion.div>
 							<div className='w-full grow flex items-end justify-between'>
 								<div>
 									<motion.div key={product.name} variants={variantsDescription} initial='hidden' animate='show'>
-										<ProductInfo product={product} quantity={quantity} />
+										<ProductInfo />
 									</motion.div>
 									<motion.button
 										key={product.id}

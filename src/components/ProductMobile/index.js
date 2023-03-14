@@ -1,0 +1,1 @@
+export { ProductSectionMobile } from './ProductSectionMobile';

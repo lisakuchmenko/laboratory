@@ -139,3 +139,26 @@ body {
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke: 1px;
 }
+
+/* .triangle {
+	display: inline-block;
+	margin: 0 5px;
+	vertical-align: middle;
+} */
+
+.triangle {
+	width: 10px;
+	height: 10px;
+	border-bottom: solid 10px #d5cdc4;
+	border-left: solid 6px transparent;
+	border-right: solid 6px transparent;
+	transition: all 0.3s 0.1s;
+}
+
+.toggle-down {
+	transform: rotate(0deg);
+}
+
+.toggle-up {
+	transform: rotate(-180deg);
+}
