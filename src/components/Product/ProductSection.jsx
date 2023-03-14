@@ -15,8 +15,8 @@ import {
 import { useAppContext } from '../Context';
 
 export function ProductSection() {
-	const { product, setProduct, setCart, setOpenCart, quantity, setQuantity } = useAppContext();
-	const [selectedImage, setSelectedImage] = useState(0);
+	const { product, setProduct, setCart, setOpenCart, quantity, setQuantity, selectedImage, setSelectedImage } =
+		useAppContext();
 
 	useEffect(() => {
 		setSelectedImage(0);
@@ -87,7 +87,7 @@ export function ProductSection() {
 									</motion.button>
 								</div>
 								<motion.div key={product.id} variants={variantsImagesSection} initial='hidden' animate='show'>
-									<ImagesSection selectedImage={selectedImage} setSelectedImage={setSelectedImage} />
+									<ImagesSection />
 								</motion.div>
 							</div>
 						</div>

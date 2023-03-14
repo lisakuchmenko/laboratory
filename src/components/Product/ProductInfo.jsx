@@ -6,7 +6,7 @@ export function ProductInfo() {
 
 	return (
 		<>
-			<div className='mb-2 sm:mb-6 text-xl font-bold'>$ {product.price[quantity].price}.00 USD</div>
+			<div className='mb-1 sm:mb-6 text-xl font-bold'>$ {product.price[quantity].price}.00 USD</div>
 			{!mobileView && <p className='max-w-75 text-xxs uppercase'>{product.description}</p>}
 		</>
 	);

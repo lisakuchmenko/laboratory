@@ -4,7 +4,7 @@ import { useAppContext } from '../Context';
 export function ProductPack() {
 	const { product, quantity, setQuantity } = useAppContext();
 	return (
-		<div className='flex mt-4 sm:mt-8 uppercase space-x-6 sm:space-x-10 text-s sm:text-xxs font-bold'>
+		<div className='flex mt-4 sm:mt-8 uppercase space-x-4 sm:space-x-10 text-s sm:text-xxs font-bold'>
 			{product.price.map((el, i) => {
 				return (
 					<div

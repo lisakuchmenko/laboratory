@@ -16,7 +16,7 @@ export function ProductSelectorMobile() {
 	};
 
 	return (
-		<div className='mt-20 mb-6'>
+		<div className='mt-20 mb-4'>
 			<div className='flex justify-between items-center' onClick={openMenu}>
 				<h1 className='text-4.5xl uppercase font-bold'>{product.name}</h1>
 				<div ref={triangleRef} className='triangle toggle-down'></div>

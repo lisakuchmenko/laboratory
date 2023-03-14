@@ -13,6 +13,7 @@ export const AppContextProvider = ({ children }) => {
 	const [openCart, setOpenCart] = useState(false);
 	const [openMenu, setOpenMenu] = useState(false);
 	const [quantity, setQuantity] = useState(0);
+	const [selectedImage, setSelectedImage] = useState(0);
 
 	//refresh page when product is changed
 	useEffect(() => {

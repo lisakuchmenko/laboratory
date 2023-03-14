@@ -10,8 +10,8 @@ const COLORS = [
 	'outline-product-4',
 ];
 
-export function ImagesSection({ selectedImage, setSelectedImage }) {
-	const { product } = useAppContext();
+export function ImagesSection() {
+	const { product, selectedImage, setSelectedImage } = useAppContext();
 	return (
 		<div>
 			{product.images.map((el, i) => {
