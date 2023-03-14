@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export function ComparingSection() {
 	return (
-		<div className='w-full h-164 flex mx-auto'>
+		<div className='w-full h-full sm:h-164 flex flex-col sm:flex-row mx-auto'>
 			<div className='h-full grow bg-text font-bold py-28 px-16 text-primary'>
 				<div className='flex flex-col h-full max-w-[525px]  justify-between mx-auto'>
 					<motion.h3

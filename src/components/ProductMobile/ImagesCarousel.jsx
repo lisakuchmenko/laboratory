@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import { useAppContext } from '../Context';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 
 export function ImagesCarousel() {
 	const { product } = useAppContext();
-	console.log(product.images);
+	console.log(product);
 
 	return (
 		<Swiper
@@ -18,9 +18,9 @@ export function ImagesCarousel() {
 				clickable: true,
 			}}
 		>
-			{product.images.map((image) => {
+			{product.images.map((image, i) => {
 				return (
-					<SwiperSlide>
+					<SwiperSlide key={i}>
 						<img className='image-position-higher' src={`/images/${image}`} />
 					</SwiperSlide>
 				);

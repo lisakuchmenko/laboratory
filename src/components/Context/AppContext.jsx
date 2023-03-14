@@ -38,6 +38,9 @@ export const AppContextProvider = ({ children }) => {
 
 		quantity,
 		setQuantity,
+
+		selectedImage,
+		setSelectedImage,
 	};
 	return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

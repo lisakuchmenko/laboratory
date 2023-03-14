@@ -81,7 +81,7 @@ export function ProductSection() {
 										initial='hidden'
 										animate='show'
 										onClick={addToCart}
-										className='w-56 mt-12 pb-4 pt-5 text-xs uppercase font-medium border-2 border-text rounded-full '
+										className='w-56 mt-12 pb-4 pt-5 text-xs uppercase font-medium border-2 border-text rounded-full'
 									>
 										Add to cart
 									</motion.button>
