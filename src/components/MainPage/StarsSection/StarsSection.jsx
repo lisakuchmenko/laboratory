@@ -46,9 +46,11 @@ export function StarsSection() {
 				}}
 			>
 				<div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-					<motion.h2 className='text-4xl text-center'>Guilt-free satisfaction for</motion.h2>
-					<div className='text-4xl italic text-center -mt-4'>every occasion.</div>
-					<p className='text-s italic  w-64 mx-auto mt-10'>
+					<motion.h2 className='text-3xl sm:text-4xl text-center w-[300px] sm:w-fit'>
+						Guilt-free satisfaction for
+					</motion.h2>
+					<div className='text-3xl sm:text-4xl italic text-center mt-0 sm:-mt-4'>every occasion.</div>
+					<p className='text-xs sm:text-s italic w-56 sm:w-64 mx-auto mt-10'>
 						Yes, you can actually eat TALA in space. Now you just have to figure out how to get there.
 					</p>
 					<div className='w-11.8 h-11.8 animation-spin mx-auto mt-20'>
