@@ -1,5 +1,7 @@
 import { useAppContext } from '../Context';
 import { useRef, useState } from 'react';
+import { classNames } from '../../utils';
+const COLORS = ['after:bg-product-0', 'after:bg-product-1', 'after:bg-product-2'];
 
 export function ProductSelectorMobile() {
 	const { product, setProduct, productData } = useAppContext();
@@ -24,22 +26,30 @@ export function ProductSelectorMobile() {
 				<h1 className='text-4.5xl uppercase font-bold'>{product.name}</h1>
 				<div ref={triangleRef} className='triangle toggle-down'></div>
 			</div>
-			<div className='bg-primary absolute z-10 w-full'>
-				<div className='flex flex-col '>
-					{menuOpen &&
-						productData.map((el) => {
+			{menuOpen && (
+				<div className='bg-primary absolute z-10 w-screen pb-10 -mx-2'>
+					<div className='flex flex-col'>
+						{productData.map((el, i) => {
 							return (
 								<div
-									key={el.id}
-									className='flex justify-between items-center py-4 px-4 border-b border-lightGrey'
-									onClick={() => setProduct(el)}
+									key={el.name}
+									className={`text-sm uppercase cursor-pointer relative px-2 py-4 ${
+										product.name === el.name
+											? `text-text after:absolute after:content-[''] after:top-10 after:left-2 after:w-12 after:h-0.5 ` +
+											  COLORS[i]
+											: 'text-lightGrey'
+									}`}
+									onClick={() => {
+										setProduct(el);
+									}}
 								>
 									{el.name}
 								</div>
 							);
 						})}
+					</div>
 				</div>
-			</div>
+			)}
 		</div>
 	);
 }
