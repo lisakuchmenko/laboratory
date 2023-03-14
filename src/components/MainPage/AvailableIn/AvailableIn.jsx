@@ -12,7 +12,6 @@ export function AvailableIn() {
 	const { scrollY } = useScroll();
 	useMotionValueEvent(scrollY, 'change', (latest) => {
 		setScrollPosition(window.innerWidth < 640 ? latest - window.innerHeight / 3 : latest);
-		console.log(latest - window.innerHeight / 3);
 	});
 
 	// useEffect(() => {

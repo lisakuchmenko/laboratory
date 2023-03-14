@@ -77,7 +77,7 @@ export function TextSection() {
 							delay: 0.5,
 						},
 					}}
-					className='p-6 sm:p-10 text-xs sm:text-4xl font-bold sm:w-120'
+					className='p-6 sm:p-10 text-xs sm:text-base font-bold sm:w-120'
 				>
 					THIS IS WHAT "FRUIT SNACKS" SHOULD HAVE ALWAYS BEEN
 				</motion.div>
