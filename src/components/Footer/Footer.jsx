@@ -24,15 +24,14 @@ export function Footer() {
 			<div className='flex flex-col sm:flex-row justify-between mt-56 sm:mt-20'>
 				<div className='flex flex-col mr-0 sm:mr-44'>
 					{sections.map((section) => (
-						<div
+						<Link
+							to={`/product/${section}`}
 							key={section}
 							className='flex justify-between w-full sm:w-110 border-b border-lightGrey mt-10 sm:mt-8 first:mt-0'
 						>
-							<Link to={`/product/${section}`} className='text-xl sm:text-sm capitalize'>
-								{section}
-							</Link>
+							<p className='text-xl sm:text-sm capitalize'>{section}</p>
 							<div>→</div>
-						</div>
+						</Link>
 					))}
 				</div>
 				{!mobileView && (
