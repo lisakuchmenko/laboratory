@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export function Footer() {
 	const sections = ['mango', 'banana', 'pineapple'];
-	const mobileView = window.innerWidth < 640;
+	const { pathname } = useLocation();
+	const isMainPage = pathname === '/';
 
 	return (
 		<div className='h-screen sm:h-auto max-w-90 sm:max-w-262.5 mx-auto pb-0 sm:pb-20 pt-40 sm:pt-0'>
@@ -34,8 +35,8 @@ export function Footer() {
 						</Link>
 					))}
 				</div>
-				{!mobileView && (
-					<div className='text-xxs w-96'>
+				{!isMainPage && (
+					<div className='text-s sm:text-xxs w-96 mt-12 sm:mt-0'>
 						<div>ABOUT</div>
 						<div>FAQS</div>
 						<div>CONTACT</div>
