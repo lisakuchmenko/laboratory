@@ -45,8 +45,8 @@ export function TasteSection() {
 		>
 			<div className='w-[300px] sm:w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-left sm:text-center'>
 				<motion.h2 className='text-2xl sm:text-4xl '>
-					Tastes just like real fruit...{' '}
-					<span className=' text-2xl sm:text-3xl italic '> because it is real fruit.</span>
+					Tastes just like real fruit...
+					<span className=' text-2xl sm:text-3xl italic '>because it is real fruit.</span>
 				</motion.h2>
 			</div>
 		</motion.div>
