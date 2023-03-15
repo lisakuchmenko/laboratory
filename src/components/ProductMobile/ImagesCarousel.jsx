@@ -8,7 +8,6 @@ import 'swiper/css/pagination';
 
 export function ImagesCarousel() {
 	const { product } = useAppContext();
-	console.log(product);
 
 	return (
 		<Swiper

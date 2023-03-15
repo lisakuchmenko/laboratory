@@ -3,9 +3,15 @@ import { ProductSelectorMobile } from './ProductSelectorMobile';
 import { ProductInfo } from '../Product/ProductInfo';
 import { ProductPack } from '../Product/ProductPack';
 import { ImagesCarousel } from './ImagesCarousel';
+import { useEffect } from 'react';
+import { AddToCartBtn } from '../Buttons/AddToCartBtn';
 
 export function ProductSectionMobile() {
-	const { product, quantity, setCart, setOpenCart } = useAppContext();
+	const { product, quantity, setCart, setOpenCart, setSelectedImage } = useAppContext();
+
+	useEffect(() => {
+		setSelectedImage(0);
+	}, [product?.id]);
 
 	const addToCart = () => {
 		setCart((prev) => {
@@ -27,6 +33,8 @@ export function ProductSectionMobile() {
 			setOpenCart(true);
 		}, 500);
 	};
+
+	if (!product) return null;
 
 	return (
 		<div className='h-full max-w-90 mx-auto'>

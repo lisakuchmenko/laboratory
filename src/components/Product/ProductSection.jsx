@@ -13,6 +13,7 @@ import {
 	variantsImagesSection,
 } from './animations';
 import { useAppContext } from '../Context';
+import { AddToCartBtn } from '../Buttons';
 
 export function ProductSection() {
 	const { product, setProduct, setCart, setOpenCart, quantity, setQuantity, selectedImage, setSelectedImage } =
@@ -22,28 +23,6 @@ export function ProductSection() {
 		setSelectedImage(0);
 	}, [product?.id]);
 
-	const addToCart = () => {
-		setCart((prev) => {
-			const productInCart = prev.find(
-				(el) => el.product.name === product.name && el.bagSize === product.price[quantity].quantity
-			);
-			if (productInCart) {
-				return prev.map((el) => {
-					if (el.product.name === product.name && el.bagSize === product.price[quantity].quantity) {
-						return { ...el, quantity: el.quantity + 1 };
-					}
-					return el;
-				});
-			}
-			return [...prev, { product, quantity: 1, bagSize: product.price[quantity].quantity }];
-		});
-
-		setTimeout(() => {
-			setOpenCart(true);
-		}, 500);
-	};
-
-	//return null if product is undefined
 	if (!product) return null;
 
 	return (
@@ -75,16 +54,7 @@ export function ProductSection() {
 									<motion.div key={product.name} variants={variantsDescription} initial='hidden' animate='show'>
 										<ProductInfo />
 									</motion.div>
-									<motion.button
-										key={product.id}
-										variants={variantsButton}
-										initial='hidden'
-										animate='show'
-										onClick={addToCart}
-										className='w-56 mt-12 pb-4 pt-5 text-xs uppercase font-medium border-2 border-text rounded-full'
-									>
-										Add to cart
-									</motion.button>
+									<AddToCartBtn className='w-56 mt-12 pb-4 pt-5 text-xs uppercase font-medium border-2 border-text rounded-full' />
 								</div>
 								<motion.div key={product.id} variants={variantsImagesSection} initial='hidden' animate='show'>
 									<ImagesSection />

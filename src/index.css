@@ -182,3 +182,37 @@ body {
 	margin: 0 !important;
 	flex-grow: 1 !important;
 }
+
+.parallax {
+	overflow: hidden;
+	letter-spacing: -2px;
+	line-height: 1.2;
+	margin: 0;
+	white-space: nowrap;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 80px;
+	display: flex;
+	white-space: nowrap;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.parallax span {
+	display: block;
+	margin-right: 30px;
+}
+
+.text-transition {
+	font-size: 10em;
+	z-index: 1;
+	margin: 0;
+	white-space: nowrap;
+	margin-top: auto;
+	transition: all 2s ease-in-out;
+}
