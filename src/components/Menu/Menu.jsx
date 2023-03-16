@@ -18,7 +18,7 @@ export function Menu({ setOpenMenu }) {
 
 	return (
 		<div className='h-full w-full min-w-screen min-h-screen fixed top-0 left-0 bg-light z-40 text-primary'>
-			<div className='max-w-262.5 mx-auto flex flex-col  mt-10'>
+			<div className='max-w-90 sm:max-w-262.5 mx-auto flex flex-col  mt-10'>
 				<div className='flex justify-between items-center'>
 					<div onClick={redirectToMainPage} className='tracking-widest text-sm cursor-pointer text-primary'>
 						TALA
@@ -27,9 +27,9 @@ export function Menu({ setOpenMenu }) {
 						<XLg />
 					</div>
 				</div>
-				<h1 className='mt-6 text-primary text-11xl font-bold -ml-3.5'>MENU</h1>
-				<div className='flex mt-10'>
-					<div className='pt-36 mr-64 text-xl'>
+				<h1 className='mt-6 text-primary text-7.5xl sm:text-11xl font-bold -ml-1.5 sm:-ml-3.5'>MENU</h1>
+				<div className='flex flex-col sm:flex-row mt-6 sm:mt-10'>
+					<div className='pt-0 sm:pt-36 mr-0 sm:mr-64 text-xl'>
 						{productData.map((el) => {
 							return (
 								<div
@@ -42,7 +42,7 @@ export function Menu({ setOpenMenu }) {
 							);
 						})}
 					</div>
-					<div className='text-xl cursor-pointer'>
+					<div className='mt-36 text-s sm:text-xl cursor-pointer'>
 						<div className='mb-2'>About</div>
 						<div className='mb-2'>FAQs</div>
 						<div>Contact</div>
