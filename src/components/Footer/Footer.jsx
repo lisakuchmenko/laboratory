@@ -35,13 +35,12 @@ export function Footer() {
 						</Link>
 					))}
 				</div>
-				{!isMainPage && (
-					<div className='text-s sm:text-xxs w-96 mt-12 sm:mt-0'>
-						<div>ABOUT</div>
-						<div>FAQS</div>
-						<div>CONTACT</div>
-					</div>
-				)}
+
+				<div className='text-s sm:text-xxs w-96 mt-12 sm:mt-0'>
+					<div>ABOUT</div>
+					<div>FAQS</div>
+					<div>CONTACT</div>
+				</div>
 			</div>
 		</div>
 	);
