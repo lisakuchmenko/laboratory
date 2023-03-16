@@ -4,6 +4,7 @@ import { Cart } from '../Cart';
 import { Menu } from '../Menu';
 import { useAppContext } from '../Context';
 import { useLocation } from 'react-router-dom';
+import { BurgerButton } from '../Buttons';
 
 export function Header({ cart, openCart, setCart, setOpenCart }) {
 	const { pathname } = useLocation();
@@ -54,7 +55,7 @@ export function Header({ cart, openCart, setCart, setOpenCart }) {
 								{openCart && <Cart cart={cart} setCart={setCart} openCart={openCart} setOpenCart={setOpenCart} />}
 							</div>
 							<div className='cursor-pointer' onClick={() => setOpenMenu(true)}>
-								<List />
+								<BurgerButton />
 							</div>
 						</div>
 					</div>
