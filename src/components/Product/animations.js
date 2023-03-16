@@ -3,7 +3,7 @@ export const variantsHeader = {
 	show: {
 		opacity: 1,
 		y: 0,
-		transition: { type: 'easeIn', duration: 0.5 },
+		transition: { type: 'easeIn', duration: 0.8 },
 	},
 };
 
@@ -22,16 +22,16 @@ export const variantsSelector = {
 	show: {
 		opacity: 1,
 		y: 0,
-		transition: { type: 'easeIn', duration: 0.5, delay: 0.4 },
+		transition: { type: 'easeIn', duration: 0.8, delay: 0.4 },
 	},
 };
 
 export const variantsButton = {
-	hidden: { opacity: 0, y: 50 },
+	hidden: { opacity: 0, y: 100 },
 	show: {
 		opacity: 1,
 		y: 0,
-		transition: { type: 'easeIn', duration: 0.5, delay: 0.7 },
+		transition: { type: 'easeIn', duration: 0.8, delay: 1.3 },
 	},
 };
 
@@ -40,7 +40,7 @@ export const variantsDescription = {
 	show: {
 		opacity: 1,
 		y: 0,
-		transition: { type: 'easeIn', duration: 0.5, delay: 1.2 },
+		transition: { type: 'easeIn', duration: 0.8, delay: 0.9 },
 	},
 };
 
@@ -49,6 +49,6 @@ export const variantsImagesSection = {
 	show: {
 		opacity: 1,
 		y: 0,
-		transition: { type: 'easeIn', duration: 0.5, delay: 0.9 },
+		transition: { type: 'easeIn', duration: 0.8, delay: 0.9 },
 	},
 };

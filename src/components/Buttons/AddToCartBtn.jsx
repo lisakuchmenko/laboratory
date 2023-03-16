@@ -1,17 +1,9 @@
 import { motion } from 'framer-motion';
 import { useAppContext } from '../Context';
+import { variantsButton } from '../Product/animations';
 
 export function AddToCartBtn(props) {
 	const { product, quantity, setCart, setOpenCart } = useAppContext();
-	console.log(props);
-	const variantsButton = {
-		hidden: { opacity: 0, y: 50 },
-		show: {
-			opacity: 1,
-			y: 0,
-			transition: { type: 'easeIn', duration: 0.5, delay: 0.7 },
-		},
-	};
 
 	const addToCart = () => {
 		setCart((prev) => {
