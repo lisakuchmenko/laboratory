@@ -1,15 +1,15 @@
 import { useState, useEffect, useMemo } from 'react';
-import { List } from 'react-bootstrap-icons';
 import { Cart } from '../Cart';
 import { Menu } from '../Menu';
 import { useAppContext } from '../Context';
 import { useLocation } from 'react-router-dom';
 import { BurgerButton } from '../Buttons';
+import { motion, AnimatePresence } from 'framer-motion';
 
-export function Header({ cart, openCart, setCart, setOpenCart }) {
+export function Header() {
 	const { pathname } = useLocation();
 	const [color, setColor] = useState(pathname === '/' || window.innerWidth < 640);
-	const { openMenu, setOpenMenu } = useAppContext();
+	const { openMenu, setOpenMenu, cart, openCart, setCart, setOpenCart } = useAppContext();
 
 	const changeColor = () => {
 		window.scrollY > 500 ? setColor(true) : setColor(false);
@@ -36,11 +36,18 @@ export function Header({ cart, openCart, setCart, setOpenCart }) {
 	}, [cart]);
 
 	return (
-		<>
+		<AnimatePresence>
 			{openMenu ? (
-				<Menu setOpenMenu={setOpenMenu} />
+				<Menu />
 			) : (
-				<header className='fixed w-screen sm:w-full z-10 top-12 text-xs'>
+				<motion.header
+					key='A'
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					exit={{ opacity: 0 }}
+					transition={{ duration: 1 }}
+					className='fixed w-screen sm:w-full z-10 top-12 text-s'
+				>
 					<div className='max-w-90 sm:max-w-262.5 mx-auto flex justify-between items-center'>
 						<h2
 							onClick={scrollToTop}
@@ -59,8 +66,8 @@ export function Header({ cart, openCart, setCart, setOpenCart }) {
 							</div>
 						</div>
 					</div>
-				</header>
+				</motion.header>
 			)}
-		</>
+		</AnimatePresence>
 	);
 }

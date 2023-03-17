@@ -1,9 +1,10 @@
-import { XLg } from 'react-bootstrap-icons';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAppContext } from '../Context';
+import { CloseButton } from '../Buttons';
+import { motion } from 'framer-motion';
 
-export function Menu({ setOpenMenu }) {
-	const { productData } = useAppContext();
+export function Menu() {
+	const { productData, setOpenMenu } = useAppContext();
 	const navigate = useNavigate();
 
 	const redirectToProductPage = (page) => {
@@ -17,14 +18,21 @@ export function Menu({ setOpenMenu }) {
 	};
 
 	return (
-		<div className='h-full w-full min-w-screen min-h-screen fixed top-0 left-0 bg-light z-40 text-primary'>
-			<div className='max-w-90 sm:max-w-262.5 mx-auto flex flex-col  mt-10'>
+		<motion.div
+			key='B'
+			initial={{ y: '-80%' }}
+			animate={{ y: 0 }}
+			exit={{ y: '-100%' }}
+			transition={{ duration: 1 }}
+			className='h-full w-full min-w-screen min-h-screen fixed top-0 left-0 bg-light z-20 text-primary'
+		>
+			<div className='max-w-90 sm:max-w-262.5 mx-auto flex flex-col mt-12'>
 				<div className='flex justify-between items-center'>
-					<div onClick={redirectToMainPage} className='tracking-widest text-sm cursor-pointer text-primary'>
+					<div onClick={redirectToMainPage} className='tracking-widest text-s cursor-pointer text-primary'>
 						TALA
 					</div>
-					<div className='text-primary cursor-pointer' onClick={() => setOpenMenu(false)}>
-						<XLg />
+					<div className='text-primary cursor-pointer'>
+						<CloseButton />
 					</div>
 				</div>
 				<h1 className='mt-6 text-primary text-7.5xl sm:text-11xl font-bold -ml-1.5 sm:-ml-3.5'>MENU</h1>
@@ -49,6 +57,6 @@ export function Menu({ setOpenMenu }) {
 					</div>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 }

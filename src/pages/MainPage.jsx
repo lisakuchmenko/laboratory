@@ -1,5 +1,5 @@
 import { Header } from '../components/Header';
-import { useAppContext } from '../components/Context';
+
 import {
 	HeroSection,
 	AvailableIn,
@@ -12,10 +12,9 @@ import {
 import { Footer } from '../components/Footer';
 
 export default function MainPage() {
-	const { cart, setCart, openCart, setOpenCart, setOpenMenu } = useAppContext();
 	return (
 		<div className='bg-primary min-h-screen max-w-screen pt-8 font-sportingGrotesque text-text overflow-x-hidden scroll-smooth'>
-			<Header cart={cart} setCart={setCart} openCart={openCart} setOpenCart={setOpenCart} setOpenMenu={setOpenMenu} />
+			<Header />
 			<HeroSection />
 			<AvailableIn />
 			<TextSection />
