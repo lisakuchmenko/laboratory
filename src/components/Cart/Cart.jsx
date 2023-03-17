@@ -1,7 +1,10 @@
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { CartItem } from './CartItem';
+import { motion } from 'framer-motion';
+import { useAppContext } from '../Context';
 
-export function Cart({ cart, setCart, openCart, setOpenCart }) {
+export function Cart() {
+	const { cart, setCart, openCart, setOpenCart } = useAppContext();
 	const [cartVisible, setCartVisible] = useState(false);
 	const ref = useRef(null);
 	const closeRef = useRef(null);
@@ -31,7 +34,13 @@ export function Cart({ cart, setCart, openCart, setOpenCart }) {
 	}, [handleClickOutside]);
 
 	return (
-		<div ref={ref} className='bg-[#e2ddd7] text-primary absolute right-0 top-8 z-20 w-80 flex flex-col rounded-lg'>
+		<motion.div
+			initial={{ y: '-80%' }}
+			animate={{ y: 0 }}
+			transition={{ duration: 1 }}
+			ref={ref}
+			className='bg-[#e2ddd7] text-primary absolute h-screen sm:h-auto -right-[48px] sm:right-0 -top-10 sm:top-8 z-20 w-screen sm:w-80 flex flex-col rounded-lg'
+		>
 			<div className='flex justify-between items-center text-sm font-bold pb-2 px-4 pt-4 border-b border-primary border-dotted'>
 				<div className='uppercase h-full flex items-center pt-0.5'>Ready to check out?</div>
 				<div ref={closeRef} className='text-xl icon-stroke cursor-pointer'>
@@ -58,6 +67,6 @@ export function Cart({ cart, setCart, openCart, setOpenCart }) {
 					<button className='w-full rounded-full bg-dark uppercase text-light text-sm mt-4 pt-5 pb-4'>next</button>
 				</div>
 			) : null}
-		</div>
+		</motion.div>
 	);
 }
