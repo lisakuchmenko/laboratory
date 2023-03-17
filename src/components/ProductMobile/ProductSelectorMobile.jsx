@@ -1,6 +1,7 @@
 import { useAppContext } from '../Context';
 import { useRef, useState } from 'react';
 import { classNames } from '../../utils';
+import { motion } from 'framer-motion';
 const COLORS = ['after:bg-product-0', 'after:bg-product-1', 'after:bg-product-2'];
 
 export function ProductSelectorMobile() {
@@ -27,8 +28,18 @@ export function ProductSelectorMobile() {
 				<div ref={triangleRef} className='triangle toggle-down'></div>
 			</div>
 			{menuOpen && (
-				<div className='bg-primary absolute z-10 w-screen pb-10 -mx-2'>
-					<div className='flex flex-col'>
+				<motion.div
+					initial={{ height: 0 }}
+					animate={{ height: '190px' }}
+					transition={{ duration: 0.5, ease: 'linear' }}
+					className='bg-primary absolute z-10 w-screen pb-10 -mx-2'
+				>
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ duration: 0.7, ease: 'linear' }}
+						className='flex flex-col'
+					>
 						{productData.map((el, i) => {
 							return (
 								<div
@@ -47,8 +58,8 @@ export function ProductSelectorMobile() {
 								</div>
 							);
 						})}
-					</div>
-				</div>
+					</motion.div>
+				</motion.div>
 			)}
 		</div>
 	);

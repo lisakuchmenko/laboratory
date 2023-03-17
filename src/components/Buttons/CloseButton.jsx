@@ -9,7 +9,6 @@ export function CloseButton() {
 	const buttonRef = useRef(null);
 
 	function onTap(event, info) {
-		console.log(info.point.x, info.point.y);
 		buttonRef.current.style.transform = 'rotate(45deg)';
 	}
 
