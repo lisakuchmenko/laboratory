@@ -19,7 +19,19 @@ export function ComparingSection() {
 					>
 						TALA
 					</motion.h3>
-					<div className='flex justify-between h-44 items-center'>
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{
+							opacity: 1,
+							y: 0,
+							transition: {
+								type: 'easeOut',
+								duration: 1,
+								delay: 0.3,
+							},
+						}}
+						className='flex justify-between h-44 items-center'
+					>
 						<div className=''>
 							<p className='text-5xl sm:text-7xl'>
 								15<span className='italic'>g</span>
@@ -31,7 +43,7 @@ export function ComparingSection() {
 							<p className='text-5xl sm:text-7xl'>90</p>
 							<p className='text-2xl font-normal'>Calories</p>
 						</div>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 			<div className='h-full grow font-bold py-20 sm:py-28 px-10 sm:px-16'>
@@ -50,7 +62,19 @@ export function ComparingSection() {
 					>
 						THEM
 					</motion.h3>
-					<div className='flex justify-between h-44 items-center text-text'>
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{
+							opacity: 1,
+							y: 0,
+							transition: {
+								type: 'easeOut',
+								duration: 1,
+								delay: 0.3,
+							},
+						}}
+						className='flex justify-between h-44 items-center text-text'
+					>
 						<div>
 							<p className='text-5xl sm:text-7xl'>
 								15<span className='italic'>g</span>
@@ -62,7 +86,7 @@ export function ComparingSection() {
 							<p className='text-5xl sm:text-7xl'>130</p>
 							<p className='text-2xl font-normal'>Calories</p>
 						</div>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</div>
