@@ -2,12 +2,14 @@ import { useAppContext } from '../Context';
 import { useRef, useState } from 'react';
 import { classNames } from '../../utils';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 const COLORS = ['after:bg-product-0', 'after:bg-product-1', 'after:bg-product-2'];
 
 export function ProductSelectorMobile() {
 	const { product, setProduct, productData } = useAppContext();
 	const triangleRef = useRef(null);
 	const [menuOpen, setMenuOpen] = useState(false);
+	const navigate = useNavigate();
 
 	const openMenu = () => {
 		if (triangleRef.current.classList.contains('toggle-up')) {
@@ -52,6 +54,8 @@ export function ProductSelectorMobile() {
 									}`}
 									onClick={() => {
 										setProduct(el);
+										navigate(`/product/${el.name}`);
+										openMenu();
 									}}
 								>
 									{el.name}

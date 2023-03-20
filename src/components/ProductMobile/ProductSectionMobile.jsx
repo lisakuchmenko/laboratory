@@ -3,15 +3,13 @@ import { ProductSelectorMobile } from './ProductSelectorMobile';
 import { ProductInfo } from '../Product/ProductInfo';
 import { ProductPack } from '../Product/ProductPack';
 import { ImagesCarousel } from './ImagesCarousel';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { AddToCartBtn } from '../Buttons/AddToCartBtn';
+import { preloadImage } from '../../utils';
 
 export function ProductSectionMobile() {
 	const { product, setSelectedImage } = useAppContext();
-
-	useEffect(() => {
-		setSelectedImage(0);
-	}, [product?.id]);
+	const [imagesPreloaded, setImagesPreloaded] = useState(false);
 
 	if (!product) return null;
 
