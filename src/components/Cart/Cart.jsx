@@ -49,7 +49,7 @@ export function Cart() {
 			</div>
 			<div className='px-4 py-1'>
 				{cart.length ? (
-					cart.map((el, i) => <CartItem key={i} index={i} item={el} cart={cart} setCart={setCart} ref={removeRef} />)
+					cart.map((el, i) => <CartItem key={i} index={i} item={el} ref={removeRef} />)
 				) : (
 					<div className='uppercase py-24 text-center font-bold text-xs'>sorry, there's nothing here yet</div>
 				)}

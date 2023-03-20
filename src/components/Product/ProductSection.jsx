@@ -46,7 +46,7 @@ export function ProductSection() {
 						/>
 						<div className='w-full flex flex-col ml-8 mt-56 justify-between'>
 							<motion.div key={product.id} variants={variantsSelector} initial='hidden' animate='show'>
-								<ProductSelector data={productData} product={product} setProduct={setProduct} />
+								<ProductSelector />
 								<ProductPack />
 							</motion.div>
 							<div className='w-full grow flex items-end justify-between'>

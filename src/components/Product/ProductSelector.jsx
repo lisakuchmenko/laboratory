@@ -1,3 +1,5 @@
+import { useAppContext } from '../Context';
+
 const COLORS = [
 	'after:bg-product-0',
 	'after:bg-product-1',
@@ -6,7 +8,10 @@ const COLORS = [
 	'after:bg-product-4',
 ];
 
-export function ProductSelector({ data, product, setProduct }) {
+export function ProductSelector() {
+	const { data, product, setProduct } = useAppContext();
+
+	if (!data) return null;
 	return (
 		<div className='flex items-center gap-x-12  z-10'>
 			{data.map((el, i) => {

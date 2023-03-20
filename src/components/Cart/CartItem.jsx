@@ -1,8 +1,10 @@
 import { useState, useMemo, useEffect, useRef, forwardRef } from 'react';
+import { useAppContext } from '../Context';
 
 export const CartItem = forwardRef((props, ref) => {
-	const { item, cart, setCart, index } = props;
+	const { item, index } = props;
 	const [value, setValue] = useState(item.quantity);
+	const { cart, setCart } = useAppContext();
 
 	useEffect(() => {
 		setValue(item.quantity);
