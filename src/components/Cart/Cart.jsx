@@ -60,8 +60,8 @@ export function Cart() {
 					<input
 						className='w-full placeholder:text-s h-5 pl-1 pt-1 mt-2 border border-dark'
 						type='email'
-						name=''
-						id=''
+						name='email'
+						id='email'
 						placeholder='Email...'
 					/>
 					<button className='w-full rounded-full bg-dark uppercase text-light text-sm mt-4 pt-5 pb-4'>next</button>

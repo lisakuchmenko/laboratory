@@ -216,3 +216,12 @@ body {
 	margin-top: auto;
 	transition: all 2s ease-in-out;
 }
+
+.overlay_container {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 32px;
+	left: -6px;
+	pointer-events: none;
+}
