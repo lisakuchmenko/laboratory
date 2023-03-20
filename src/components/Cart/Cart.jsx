@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useAppContext } from '../Context';
 
 export function Cart() {
-	const { cart, setCart, openCart, setOpenCart } = useAppContext();
+	const { cart, openCart, setOpenCart } = useAppContext();
 	const [cartVisible, setCartVisible] = useState(false);
 	const ref = useRef(null);
 	const closeRef = useRef(null);

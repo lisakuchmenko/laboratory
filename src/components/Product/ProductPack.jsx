@@ -9,7 +9,7 @@ export function ProductPack() {
 				return (
 					<div
 						onClick={() => setQuantity(i)}
-						className={classNames('cursor-pointer', quantity === i ? 'text-text' : 'text-lightGrey')}
+						className={classNames('cursor-pointer py-2', quantity === i ? 'text-text' : 'text-lightGrey')}
 						key={el.quantity}
 					>
 						{el.quantity} bags

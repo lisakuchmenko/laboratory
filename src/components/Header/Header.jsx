@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 export function Header() {
 	const { pathname } = useLocation();
 	const [color, setColor] = useState(pathname === '/' || window.innerWidth < 640);
-	const { openMenu, setOpenMenu, cart, openCart, setCart, setOpenCart } = useAppContext();
+	const { openMenu, setOpenMenu, cart, openCart, setOpenCart } = useAppContext();
 
 	const changeColor = () => {
 		window.scrollY > 500 ? setColor(true) : setColor(false);
@@ -59,7 +59,7 @@ export function Header() {
 							<div onClick={() => setOpenCart(true)} className='flex relative cursor-pointer'>
 								<div className='mr-2'>CART</div>
 								<span className='inline-block w-4'>{sumOfItems}</span>
-								{openCart && <Cart cart={cart} setCart={setCart} openCart={openCart} setOpenCart={setOpenCart} />}
+								{openCart && <Cart />}
 							</div>
 							<div className='cursor-pointer' onClick={() => setOpenMenu(true)}>
 								<BurgerButton />
