@@ -25,8 +25,8 @@ export function ProductSection() {
 	}, [product?.id]);
 
 	const [src, { blur }] = useProgressiveImg(
-		`/images/${product.images[selectedImage][0]}`,
-		`/images/${product.images[selectedImage][1]}`
+		`/images/${product?.images[selectedImage][0]}`,
+		`/images/${product?.images[selectedImage][1]}`
 	);
 
 	if (!product) return null;
