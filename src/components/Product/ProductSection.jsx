@@ -32,7 +32,7 @@ export function ProductSection() {
 	if (!product) return null;
 
 	return (
-		<div className='max-w-[1100px] mx-auto h-screen relative'>
+		<div className='max-w-[1100px] mx-auto relative'>
 			{!!product ? (
 				<>
 					<motion.h1

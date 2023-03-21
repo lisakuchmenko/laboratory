@@ -27,7 +27,7 @@ export const CartItem = forwardRef((props, ref) => {
 
 	return (
 		<div ref={ref} className='flex my-3 z-30'>
-			<img className='w-16 h-16 object-cover image-position' src={`/images/${item.product.images[0]}`} alt='' />
+			<img className='w-16 h-16 object-cover image-position' src={`/images/${item.product.images[0][0]}`} alt='' />
 			<div className='flex flex-col mx-4 grow'>
 				<h4 className='uppercase text-sm font-bold '>{item.product.name}</h4>
 				<div className='text-xs leading-4'>$ {price}.00 USD</div>
