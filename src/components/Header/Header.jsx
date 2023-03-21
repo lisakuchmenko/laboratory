@@ -59,7 +59,9 @@ export function Header() {
 							<div onClick={() => setOpenCart(true)} className='flex relative cursor-pointer'>
 								<div className='mr-2'>CART</div>
 								<span className='inline-block w-4'>{sumOfItems}</span>
-								{openCart && <Cart />}
+								<AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+									{openCart && <Cart />}
+								</AnimatePresence>
 							</div>
 							<div className='cursor-pointer' onClick={() => setOpenMenu(true)}>
 								<BurgerButton />

@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { CartItem } from './CartItem';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useAppContext } from '../Context';
 
 export function Cart() {
@@ -33,11 +33,18 @@ export function Cart() {
 		};
 	}, [handleClickOutside]);
 
+	const dropIn = {
+		hidden: { y: '-50%' },
+		visible: { y: 0, transition: { duration: 0.5, ease: 'linear' } },
+		exit: { y: '-150%' },
+	};
+
 	return (
 		<motion.div
-			initial={{ y: '-80%' }}
-			animate={{ y: 0 }}
-			transition={{ duration: 1 }}
+			variants={dropIn}
+			initial='hidden'
+			animate='visible'
+			exit='exit'
 			ref={ref}
 			className='bg-[#e2ddd7] text-primary absolute h-screen sm:h-auto -right-[48px] sm:right-0 -top-10 sm:top-8 z-20 w-screen sm:w-80 flex flex-col rounded-lg'
 		>
