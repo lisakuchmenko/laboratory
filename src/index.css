@@ -222,6 +222,6 @@ body {
 	height: 100vh;
 	position: fixed;
 	top: 32px;
-	left: -6px;
+	left: 0;
 	pointer-events: none;
 }
