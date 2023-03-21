@@ -12,6 +12,7 @@ const COLORS = [
 
 export function ImagesSection() {
 	const { product, selectedImage, setSelectedImage } = useAppContext();
+
 	return (
 		<div>
 			{product.images.map((el, i) => {
@@ -24,7 +25,11 @@ export function ImagesSection() {
 						)}
 						onClick={() => setSelectedImage(i)}
 					>
-						<img src={`/images/${el}`} alt='' className='w-full h-full object-cover image-position-higher rounded-xs' />
+						<img
+							src={`/images/${el[1]}`}
+							alt=''
+							className='w-full h-full object-cover image-position-higher rounded-xs'
+						/>
 					</div>
 				);
 			})}

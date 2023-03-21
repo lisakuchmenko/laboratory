@@ -9,12 +9,11 @@ const COLORS = [
 ];
 
 export function ProductSelector() {
-	const { data, product, setProduct } = useAppContext();
+	const { productData, product, setProduct } = useAppContext();
 
-	if (!data) return null;
 	return (
 		<div className='flex items-center gap-x-12  z-10'>
-			{data.map((el, i) => {
+			{productData.map((el, i) => {
 				return (
 					<div
 						key={el.name}

@@ -8,8 +8,7 @@ import { AddToCartBtn } from '../Buttons/AddToCartBtn';
 import { preloadImage } from '../../utils';
 
 export function ProductSectionMobile() {
-	const { product, setSelectedImage } = useAppContext();
-	const [imagesPreloaded, setImagesPreloaded] = useState(false);
+	const { product } = useAppContext();
 
 	if (!product) return null;
 

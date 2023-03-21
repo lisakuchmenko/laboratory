@@ -14,19 +14,25 @@ import {
 } from './animations';
 import { useAppContext } from '../Context';
 import { AddToCartBtn } from '../Buttons';
+import { useProgressiveImg } from '../../hooks';
+import { useNavigate } from 'react-router-dom';
 
 export function ProductSection() {
-	const { product, setProduct, setCart, setOpenCart, quantity, setQuantity, selectedImage, setSelectedImage } =
-		useAppContext();
+	const { product, selectedImage, setSelectedImage } = useAppContext();
 
 	useEffect(() => {
 		setSelectedImage(0);
 	}, [product?.id]);
 
+	const [src, { blur }] = useProgressiveImg(
+		`/images/${product.images[selectedImage][0]}`,
+		`/images/${product.images[selectedImage][1]}`
+	);
+
 	if (!product) return null;
 
 	return (
-		<div className='max-w-[1100px] mx-auto relative'>
+		<div className='max-w-[1100px] mx-auto h-screen relative'>
 			{!!product ? (
 				<>
 					<motion.h1
@@ -40,9 +46,14 @@ export function ProductSection() {
 					</motion.h1>
 					<div className='flex justify-start'>
 						<img
-							src={`/images/${product.images[selectedImage]}`}
+							key={src}
+							src={`/images/${product.images[selectedImage][1]}`}
 							alt=''
 							className='w-121.75 min-w-121.75 h-147.5 object-cover'
+							style={{
+								filter: blur ? 'blur(20px)' : 'none',
+								transition: blur ? 'none' : 'filter 0s ease-out',
+							}}
 						/>
 						<div className='w-full flex flex-col ml-8 mt-56 justify-between'>
 							<motion.div key={product.id} variants={variantsSelector} initial='hidden' animate='show'>
