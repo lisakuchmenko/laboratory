@@ -1,13 +1,17 @@
 import { Hero } from './Hero';
-import { HeroImage } from './HeroImage';
-import { HeroText } from './HeroText';
+import HeroDescription from './HeroDescription';
+import HeroImages from './HeroImages';
 
 export function HeroSection() {
 	return (
-		<>
+		<div className='2xl:w-380 mt-[260px] mx-auto'>
 			<Hero />
-			<HeroImage />
-			<HeroText />
-		</>
+			<HeroImages/>
+			<HeroDescription/>
+		</div>
 	);
+}
+{
+/* <HeroImage />
+<HeroText /> */
 }

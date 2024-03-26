@@ -70,6 +70,7 @@ module.exports = {
 				175: '700px',
 				190: '760px',
 				262: '1050px',
+				380: '1520px'
 			},
 		},
 		colors: {
@@ -86,6 +87,8 @@ module.exports = {
 			lightGrey: '#d3d3d353',
 			light: '#d5cdc4',
 			dark: '#232025',
+			accent: '#89888C',
+			white: '#ffffff',
 		},
 		maxWidth: {
 			75: '300px',

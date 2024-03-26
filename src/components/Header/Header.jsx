@@ -51,16 +51,16 @@ export function Header() {
 					transition={{ duration: 1 }}
 					className='fixed w-screen sm:w-full z-10 top-12 text-s'
 				>
-					<div className='max-w-90 sm:max-w-262.5 mx-auto flex justify-between items-center text-xl text-text'>
-						<h2
+					<div className='w-90 sm:w-262.5 2xl:w-380 mx-auto flex justify-between items-center text-xl text-text'>
+						<p
 							onClick={scrollToTop}
 							className={`tracking-wide cursor-pointer uppercase ${
 								color ? 'text-text' : 'text-primary'
 							}`}
 						>
 							tutti bites
-						</h2>
-						<div className='flex w-25 justify-between relative'>
+						</p>
+						<div className='flex w-25 gap-[60px] justify-between relative'>
 							<div
 								onClick={() => setOpenCart(true)}
 								className='flex relative cursor-pointer'
@@ -75,7 +75,7 @@ export function Header() {
 									{openCart && <Cart />}
 								</AnimatePresence>
 							</div>
-							<div className='cursor-pointer' onClick={() => setOpenMenu(true)}>
+							<div className='cursor-pointer mt-[7.5px]' onClick={() => setOpenMenu(true)}>
 								<BurgerButton />
 							</div>
 						</div>

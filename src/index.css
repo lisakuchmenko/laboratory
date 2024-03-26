@@ -225,3 +225,4 @@ body {
 	left: 0;
 	pointer-events: none;
 }
+input {outline: 0 !important;}
