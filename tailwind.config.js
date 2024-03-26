@@ -22,6 +22,7 @@ module.exports = {
 			'7xl': '4.5rem',
 			'7.5xl': '5.5rem',
 			'8xl': '6rem',
+			'8.25xl': '6.25rem',
 			'8.5xl': '7rem',
 			'9xl': '8rem',
 			'10xl': '9rem',
@@ -72,8 +73,8 @@ module.exports = {
 			},
 		},
 		colors: {
-			primary: '#232025',
-			text: '#D6CDC4',
+			primary: '#16161a',
+			text: '#F8F8F8',
 			product: {
 				0: '#f3a104',
 				1: '#dfe022',

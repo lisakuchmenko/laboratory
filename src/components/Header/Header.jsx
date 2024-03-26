@@ -8,8 +8,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export function Header() {
 	const { pathname } = useLocation();
-	const [color, setColor] = useState(pathname === '/' || window.innerWidth < 640);
-	const { openMenu, setOpenMenu, cart, openCart, setOpenCart } = useAppContext();
+	const [color, setColor] = useState(
+		pathname === '/' || window.innerWidth < 640
+	);
+	const { openMenu, setOpenMenu, cart, openCart, setOpenCart } =
+		useAppContext();
 
 	const changeColor = () => {
 		window.scrollY > 500 ? setColor(true) : setColor(false);
@@ -48,18 +51,27 @@ export function Header() {
 					transition={{ duration: 1 }}
 					className='fixed w-screen sm:w-full z-10 top-12 text-s'
 				>
-					<div className='max-w-90 sm:max-w-262.5 mx-auto flex justify-between items-center'>
+					<div className='max-w-90 sm:max-w-262.5 mx-auto flex justify-between items-center text-xl text-text'>
 						<h2
 							onClick={scrollToTop}
-							className={`tracking-widest cursor-pointer ${color ? 'text-text' : 'text-primary'}`}
+							className={`tracking-wide cursor-pointer uppercase ${
+								color ? 'text-text' : 'text-primary'
+							}`}
 						>
-							TALA
+							tutti bites
 						</h2>
 						<div className='flex w-25 justify-between relative'>
-							<div onClick={() => setOpenCart(true)} className='flex relative cursor-pointer'>
-								<div className='mr-2'>CART</div>
+							<div
+								onClick={() => setOpenCart(true)}
+								className='flex relative cursor-pointer'
+							>
+								<div className='mr-2 uppercase'>cart</div>
 								<span className='inline-block w-4'>{sumOfItems}</span>
-								<AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+								<AnimatePresence
+									initial={false}
+									exitBeforeEnter={true}
+									onExitComplete={() => null}
+								>
 									{openCart && <Cart />}
 								</AnimatePresence>
 							</div>
