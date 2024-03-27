@@ -98,6 +98,7 @@ module.exports = {
 			dark: '#232025',
 			accent: '#89888C',
 			white: '#ffffff',
+			main_dark: '#17161B',
 		},
 		maxWidth: {
 			75: '300px',

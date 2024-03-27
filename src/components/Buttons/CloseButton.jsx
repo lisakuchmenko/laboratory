@@ -16,7 +16,7 @@ export function CloseButton() {
 		<motion.button
 			ref={buttonRef}
 			onTap={onTap}
-			className='h-2.5 w-5 flex relative cursor-pointer pl-2 mt-0.5'
+			className='h-5 w-5 flex relative cursor-pointer'
 			onClick={() => setOpenMenu(false)}
 		>
 			<motion.div
@@ -28,7 +28,7 @@ export function CloseButton() {
 					visible: { rotate: '135deg' },
 					hidden: { rotate: 0 },
 				}}
-				className='w-5 h-0.5 bg-primary absolute'
+				className='w-5 h-0.5 top-[8px] right-[0px] bg-primary absolute'
 			></motion.div>
 			<motion.div
 				initial='hidden'
@@ -39,7 +39,7 @@ export function CloseButton() {
 					visible: { rotate: '45deg', width: '20px' },
 					hidden: { rotate: 0, width: '12px' },
 				}}
-				className=' h-0.5 bg-primary absolute'
+				className='h-0.5 bg-primary top-[8px] right-[0px] absolute'
 			></motion.div>
 		</motion.button>
 	);

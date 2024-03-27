@@ -17,6 +17,12 @@ export function Menu() {
 		setOpenMenu(false);
 	};
 
+	const sections = [
+		"about",
+		"faqs",
+		"contacts"
+	];
+
 	return (
 		<motion.div
 			key='B'
@@ -24,37 +30,48 @@ export function Menu() {
 			animate={{ y: 0 }}
 			exit={{ y: '-100%' }}
 			transition={{ duration: 1 }}
-			className='h-full w-full min-w-screen min-h-screen fixed top-0 left-0 bg-light z-20 text-primary'
+			className='h-full w-full min-w-screen min-h-screen fixed top-0 left-0 bg-white z-20 text-primary'
 		>
-			<div className='max-w-90 sm:max-w-262.5 mx-auto flex flex-col mt-12'>
+			<div className='w-90 sm:w-262.5 3xl:w-[1600px] mx-auto flex flex-col mt-12'>
 				<div className='flex justify-between items-center'>
-					<div onClick={redirectToMainPage} className='tracking-widest text-s cursor-pointer text-primary'>
-						TALA
-					</div>
-					<div className='text-primary cursor-pointer'>
+					<p onClick={redirectToMainPage} className='uppercase tracking-[0.1px] font-semibold leading-6 text-xl cursor-pointer'>
+						tutti bites
+					</p>
+
+					<div className='flex gap-[60px] items-center'>
+						<div className='flex gap-5 font-semibold items-center text-xl leading-6'>
+							<span className='uppercase'>cart</span>
+							<span className='inline-block w-4'>0</span>
+						</div>
 						<CloseButton />
 					</div>
 				</div>
-				<h1 className='mt-6 text-primary text-7.5xl sm:text-11xl font-bold -ml-1.5 sm:-ml-3.5'>MENU</h1>
-				<div className='flex flex-col sm:flex-row mt-6 sm:mt-10'>
-					<div className='pt-0 sm:pt-36 mr-0 sm:mr-64 text-xl'>
-						{productData.map((el) => {
-							return (
-								<div
-									onClick={() => redirectToProductPage(el.name)}
-									className='mb-2 last:mb-0 text-primary capitalize cursor-pointer'
-									key={el.name}
-								>
-									{el.name}
-								</div>
-							);
-						})}
-					</div>
-					<div className='mt-36 text-s sm:text-xl cursor-pointer'>
-						<div className='mb-2'>About</div>
-						<div className='mb-2'>FAQs</div>
-						<div>Contact</div>
-					</div>
+				<div className='flex gap-[311px] items-end'>
+					<ul className='flex flex-col mt-[170.5px]'>
+						{
+							sections.map(section=>
+								<li key={section}>
+									<Link 
+										className='uppercase font-bold text-[110px] leading-[182px] tracking-[0.2px] text-main_dark' 
+										href={`/#${section}`}
+										>
+										{section}
+									</Link>
+								</li>)
+						}
+					</ul>
+					<ul className='flex flex-col gap-5 mb-16'>
+						{
+							productData.map(page=>
+								<li 
+									key={page.name}
+									onClick={()=>redirectToProductPage(page.name)} 
+									className='font-bold text-main_dark tracking-[0.2px] text-xl leading-[33px] uppercase'>
+									<Link href={page.name}>{page.name}</Link>
+								</li>
+							)
+						}
+					</ul>
 				</div>
 			</div>
 		</motion.div>

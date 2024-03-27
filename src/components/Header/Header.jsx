@@ -49,7 +49,7 @@ export function Header() {
 					animate={{ opacity: 1 }}
 					exit={{ opacity: 0 }}
 					transition={{ duration: 1 }}
-					className='fixed w-screen z-10 top-12 text-s'
+					className='fixed w-screen z-30 top-12 text-s'
 				>
 					<div className='w-[79vw] 3xl:w-380 mx-auto flex justify-between items-center text-xl text-text'>
 						<p
