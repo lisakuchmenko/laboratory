@@ -3,6 +3,10 @@ module.exports = {
 	content: ['./public/index.html', './src/**/*.{js,jsx,ts,tsx}'],
 	theme: {
 		screens: {
+			'sm': '540px',
+			'md':'768px',
+			'lg':'1024px',
+			'xl': '1280px',
 			'3xl': '1600px',
 		},
 		fontFamily: {
@@ -30,6 +34,7 @@ module.exports = {
 			'9xl': '8rem',
 			'10xl': '9rem',
 			'11xl': '10rem',
+			'12xl':'12.5rem'
 		},
 		letterSpacing: {
 			widest: '0.25em',
@@ -60,6 +65,7 @@ module.exports = {
 				13: '52px',
 				25: '100px',
 				30: '120px',
+				50: '200px',
 				75: '300px',
 				110: '440px',
 				120: '480px',

@@ -1,12 +1,8 @@
 import { Header } from '../components/Header';
 import {
 	HeroSection,
-	AvailableIn,
-	TextSection,
-	StarsSection,
 	IngredientsNumber,
 	ScrollSection,
-	ParallaxComponent,
 } from '../components/MainPage';
 import { Footer } from '../components/Footer';
 import { PageBlur } from '../components/PageBlur';
@@ -21,12 +17,9 @@ export default function MainPage() {
 				<HeroSection />
 				<AllSnaks/>
 				<Space/>
-				{/* <TextSection /> */}
-				{/* <StarsSection /> */}
-				{/* <IngredientsNumber /> */}
-				{/* <ScrollSection /> */}
-				{/* <ParallaxComponent /> */}
-				{/* <Footer /> */}
+				<IngredientsNumber />
+				<ScrollSection />
+				<Footer />
 			</PageBlur>
 		</div>
 	);
