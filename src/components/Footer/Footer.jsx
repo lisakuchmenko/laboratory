@@ -21,7 +21,7 @@ export function Footer() {
   );
 
   return (
-    <div className="h-screen sm:h-auto sm:w-262.5 mx-auto pb-0 sm:pb-20 2xl:pb-0 pt-40 sm:pt-0">
+    <div className="h-screen sm:h-auto sm:w-262.5 mx-auto pb-0  pt-40 sm:pt-0">
      <div className="2xl:w-380  mx-auto">
      	 <h2 className="text-[5rem] leading-[120px] text-center font-normal">
 	        Take your snacking to <span className="text-grey">new heights.</span>

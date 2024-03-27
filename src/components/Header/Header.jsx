@@ -49,9 +49,9 @@ export function Header() {
 					animate={{ opacity: 1 }}
 					exit={{ opacity: 0 }}
 					transition={{ duration: 1 }}
-					className='fixed w-screen sm:w-full z-10 top-12 text-s'
+					className='fixed w-screen z-10 top-12 text-s'
 				>
-					<div className='w-90 sm:w-262.5 2xl:w-380 mx-auto flex justify-between items-center text-xl text-text'>
+					<div className='w-[79vw] 3xl:w-380 mx-auto flex justify-between items-center text-xl text-text'>
 						<p
 							onClick={scrollToTop}
 							className={`tracking-wide cursor-pointer uppercase ${
@@ -60,7 +60,7 @@ export function Header() {
 						>
 							tutti bites
 						</p>
-						<div className='flex w-25 gap-[60px] justify-between relative'>
+						<div className='flex gap-[60px] justify-between relative'>
 							<div
 								onClick={() => setOpenCart(true)}
 								className='flex relative cursor-pointer'

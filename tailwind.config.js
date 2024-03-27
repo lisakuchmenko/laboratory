@@ -2,6 +2,9 @@
 module.exports = {
 	content: ['./public/index.html', './src/**/*.{js,jsx,ts,tsx}'],
 	theme: {
+		screens: {
+			'3xl': '1600px',
+		},
 		fontFamily: {
 			poppins: ['Poppins', 'sans-serif'],
 			sportingGrotesque: ['Sporting Grotesque', 'sans-serif'],

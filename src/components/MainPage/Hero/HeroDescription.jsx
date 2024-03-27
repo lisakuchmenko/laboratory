@@ -1,6 +1,6 @@
 const HeroDescription = () => {
   return (
-    <div className="my-[360px]">
+    <div className="mt-75 3xl:mt-[360px] mb-[40] 3xl:mb-[200px]">
       <p className="font-normal text-[44px] leading-[73px] text-center text-accent">
         <span className="text-white">
           Reconnecting with the essence of fruit snacks

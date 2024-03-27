@@ -4,7 +4,7 @@ import HeroImages from './HeroImages';
 
 export function HeroSection() {
 	return (
-		<div className='2xl:w-380 mt-[260px] mx-auto'>
+		<div className='w-[79vw] mx-auto 3xl:w-380 mt-[228px]'>
 			<Hero />
 			<HeroImages/>
 			<HeroDescription/>

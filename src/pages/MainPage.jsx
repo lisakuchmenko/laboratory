@@ -10,6 +10,8 @@ import {
 } from '../components/MainPage';
 import { Footer } from '../components/Footer';
 import { PageBlur } from '../components/PageBlur';
+import AllSnaks from '../components/AllSnaks';
+import Space from '../components/Space';
 
 export default function MainPage() {
 	return (
@@ -17,13 +19,14 @@ export default function MainPage() {
 			<Header />
 			<PageBlur>
 				<HeroSection />
-				<AvailableIn />
-				<TextSection />
-				<StarsSection />
-				<IngredientsNumber />
+				<AllSnaks/>
+				<Space/>
+				{/* <TextSection /> */}
+				{/* <StarsSection /> */}
+				{/* <IngredientsNumber /> */}
 				{/* <ScrollSection /> */}
-				<ParallaxComponent />
-				<Footer />
+				{/* <ParallaxComponent /> */}
+				{/* <Footer /> */}
 			</PageBlur>
 		</div>
 	);

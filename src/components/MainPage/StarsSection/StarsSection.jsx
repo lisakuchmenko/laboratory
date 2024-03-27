@@ -35,15 +35,15 @@ export function StarsSection() {
 			<motion.div
 				ref={starRef}
 				className='h-screen w-full overflow-hidden relative'
-				initial={{ opacity: 0 }}
-				whileInView={{
-					opacity: 1,
-					transition: {
-						type: 'easeOut',
-						duration: 1,
-						delay: 0.3,
-					},
-				}}
+				// initial={{ opacity: 0 }}
+				// whileInView={{
+				// 	opacity: 1,
+				// 	transition: {
+				// 		type: 'easeOut',
+				// 		duration: 1,
+				// 		delay: 0.3,
+				// 	},
+				// }}
 			>
 				<div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
 					<motion.h2 className='text-3xl sm:text-4xl text-center w-[300px] sm:w-fit'>
