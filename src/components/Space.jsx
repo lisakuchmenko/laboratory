@@ -14,7 +14,8 @@ const Space = () => {
     <section
       className="w-screen h-[1000px] relative overflow-hidden grid place-items-center"
     >
-      <div className="w-[1028px] mx-auto flex flex-col items-center gap-[200px]">
+      <div style={{backgroundImage: "url('/images/space/space.gif')"}} className="opacity-50 w-full h-full"></div>
+      <div className="w-[1028px] mx-auto flex flex-col items-center gap-[200px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute">
         <div className="font-normal text-[33px] leading-[50px] text-center text-accent">
           <motion.p 
            initial={{opacity:0, y:50}}

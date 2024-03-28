@@ -11,7 +11,7 @@ import Space from '../components/Space';
 
 export default function MainPage() {
 	return (
-		<div className='bg-primary min-h-screen max-w-screen pt-8 font-sportingGrotesque text-text overflow-x-hidden scroll-smooth'>
+		<div className='bg-[#1D1B20] min-h-screen max-w-screen pt-8 font-sportingGrotesque text-text overflow-x-hidden scroll-smooth'>
 			<Header />
 			<PageBlur>
 				<HeroSection />

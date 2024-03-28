@@ -1,9 +1,7 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   const sections = ["mango", "banana", "pineapple"];
-  const { pathname } = useLocation();
-  const isMainPage = pathname === "/";
 
   const ArrowImage = (
     <svg
@@ -49,7 +47,7 @@ export function Footer() {
 	              name="email"
 	              id=""
 	              placeholder="Email address"
-	              className="placeholder:3xl:text-[33px] 3xl:grow placeholder:3xl:leading-[55px] 3xl:h-[59px] 3xl:text-[33px] 3xl:leading-[55px] bg-primary w-full sm:w-96 placeholder:text-text mt-8 sm:mt-0 placeholder:text-xl sm:placeholder:text-base"
+	              className="placeholder:3xl:text-[33px] 3xl:grow placeholder:3xl:leading-[55px] 3xl:h-[59px] 3xl:text-[33px] 3xl:leading-[55px] bg-[#1D1B20] w-full sm:w-96 placeholder:text-text mt-8 sm:mt-0 placeholder:text-xl sm:placeholder:text-base"
 	            />
 	            <button className="w-9 h-9">{ArrowImage}</button>
 	          </div>
