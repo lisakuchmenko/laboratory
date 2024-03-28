@@ -60,6 +60,8 @@ module.exports = {
 		extend: {
 			spacing: {
 				0.125: '0.05px',
+				1.8: '14px',
+				1.5: '25px',
 				11.8: '47.172px',
 				12.5: '50px',
 				13: '52px',
@@ -83,6 +85,7 @@ module.exports = {
 			},
 		},
 		colors: {
+			// primary: '#232025',
 			primary: '#16161a',
 			text: '#F8F8F8',
 			product: {

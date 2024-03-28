@@ -35,6 +35,7 @@ export function AddToCartBtn(props) {
 			{...props}
 		>
 			Add to cart
+			{props.icon ? props.icon : null}
 		</motion.button>
 	);
 }

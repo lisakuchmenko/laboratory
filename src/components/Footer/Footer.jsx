@@ -22,7 +22,7 @@ export function Footer() {
 
   return (
     <footer className="mt-80 3xl:mt-100">
-     <div className="w-[76vw] 3xl:w-380 mx-auto">
+     <div className="w-11/12 3xl:w-380 mx-auto">
      	 <h2 className="text-[5rem] leading-[120px] text-center font-normal">
 	        Take your snacking to <span className="text-grey">new heights.</span>
 	      </h2>

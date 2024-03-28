@@ -16,18 +16,18 @@ export default function ProductPage() {
 	const { openMenu } = useAppContext();
 	const isMobile = window.innerWidth < 640;
 	return (
-		<div className='bg-primary min-h-screen max-w-screen pt-8 font-sportingGrotesque text-text overflow-x-hidden'>
+		<div className='bg-primary min-h-screen max-w-screen font-sportingGrotesque text-text overflow-x-hidden'>
 			{openMenu && <Menu />}
 			<Header />
 			<PageBlur>
 				{isMobile ? <ProductSectionMobile /> : <ProductSection />}
-				<HorizontalScrollText />
+				{/* <HorizontalScrollText />
 				<Ingredients />
 				<TasteSection />
 				<ComparingSection />
 				<NutritionFacts />
 				<SnackBetter />
-				<Footer />
+				<Footer /> */}
 			</PageBlur>
 		</div>
 	);

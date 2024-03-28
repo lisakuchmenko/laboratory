@@ -32,7 +32,7 @@ export function Menu() {
 			transition={{ duration: 1 }}
 			className='h-full w-full min-w-screen min-h-screen fixed top-0 left-0 bg-white z-20 text-primary'
 		>
-			<div className='w-90 sm:w-262.5 3xl:w-[1600px] mx-auto flex flex-col mt-12'>
+			<div className='w-[90vw] 3xl:w-[1600px] mx-auto flex flex-col mt-12'>
 				<div className='flex justify-between items-center'>
 					<p onClick={redirectToMainPage} className='uppercase tracking-[0.1px] font-semibold leading-6 text-xl cursor-pointer'>
 						tutti bites

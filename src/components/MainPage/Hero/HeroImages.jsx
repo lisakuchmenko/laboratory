@@ -29,7 +29,6 @@ const HeroImages = () => {
     },
   ];
 
-  console.log(0 / 2);
   return (
     <div className="flex gap-6 mt-40">
       {productImagesArr.map((imageObj, i) => (
@@ -51,7 +50,7 @@ const HeroImages = () => {
           ref={imageObj.ref}
           src={imageObj.src}
           alt="product_image"
-          className="w-[25vw] h-[25vw] max-w-[486px] 3xl:w-[486px] 3xl:h-auto"
+          className="w-[30vw] max-w-[486px] 3xl:w-[486px] 3xl:h-auto"
         />
       ))}
     </div>

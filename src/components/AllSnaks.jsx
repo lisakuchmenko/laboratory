@@ -15,12 +15,12 @@ const AllSnaks = () => {
   ];
 
   return (
-    <section id="snaks" className="w-[79vw] mx-auto 3xl:w-380 mb-75 3xl:mb-[320px]">
+    <section id="snaks" className="w-11/12 mx-auto 3xl:w-380 mb-75 3xl:mb-[320px]">
       <ul className="flex gap-[30px] pt-40">
         {snaks.map((snak, i) => (
           <li
             key={snak.name}
-            className="group transition duration-700 relative w-[25vw] h-[25vw] 3xl:w-[487px] 3xl:h-[487px] max-w-[487px] max-h-[487px] flex items-center justify-center rounded-[50%] border border-text hover:border-[transparent] "
+            className="group transition duration-700 relative w-[30vw] h-[30vw] 3xl:w-[487px] 3xl:h-[487px] max-w-[487px] max-h-[487px] flex items-center justify-center rounded-[50%] border border-text hover:border-[transparent] "
           >
             <div
               style={{ backgroundImage: `url(${snak.img})` }}
