@@ -2,6 +2,7 @@ export const productData = [
 	{
 		id: 1,
 		name: 'mango',
+		ingredien_img: 'mango_ingredient.png',
 		price: [
 			{ quantity: 3, price: 9 },
 			{ quantity: 5, price: 15 },

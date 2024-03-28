@@ -5,7 +5,6 @@ import { Ingredients } from '../components/Ingredients';
 import { TasteSection } from '../components/TasteSection';
 import { ComparingSection } from '../components/ComparingSection';
 import { NutritionFacts } from '../components/NutritionFacts';
-import { SnackBetter } from '../components/SnackBetter';
 import { Footer } from '../components/Footer';
 import { Menu } from '../components/Menu';
 import { useAppContext } from '../components/Context';
@@ -21,13 +20,12 @@ export default function ProductPage() {
 			<Header />
 			<PageBlur>
 				{isMobile ? <ProductSectionMobile /> : <ProductSection />}
-				{/* <HorizontalScrollText />
+				<HorizontalScrollText />
 				<Ingredients />
 				<TasteSection />
 				<ComparingSection />
 				<NutritionFacts />
-				<SnackBetter />
-				<Footer /> */}
+				<Footer /> 
 			</PageBlur>
 		</div>
 	);

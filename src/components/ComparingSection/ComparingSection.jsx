@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 
 export function ComparingSection() {
 	return (
-		<div className='w-full h-full sm:h-164 flex flex-col sm:flex-row mx-auto'>
-			<div className='h-full grow bg-text font-bold py-20 sm:py-28 px-10 sm:px-16 text-primary'>
-				<div className='flex flex-col h-full max-w-90 sm:max-w-[525px]  justify-between mx-auto'>
-					<motion.h3
+		<div className='w-full flex flex-col sm:flex-row mx-auto'>
+			<div className='h-full w-1/2 font-bold py-20 sm:py-28  sm:px-16 3xl:px-[110px] 3xl:pt-[70px] 3xl:pb-[150px] bg-[#f2e6d8]'>
+				<div className='flex flex-col gap-[163px] mx-auto '>
+					<motion.div
 						initial={{ opacity: 0 }}
 						whileInView={{
 							opacity: 1,
@@ -15,10 +15,11 @@ export function ComparingSection() {
 								delay: 0.3,
 							},
 						}}
-						className='text-7xl sm:text-8xl'
+						className='h-[367px] relative text-[6.25vw] xl:text-[100px] 3xl:text-[120px] leading-[198px] text-main_dark tracking-[0.3px] uppercase'
 					>
-						TALA
-					</motion.h3>
+						<p className='text-left'>tutti</p>
+						<p className='text-right absolute top-[139px] right-0'>bites</p>
+					</motion.div>
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{
@@ -30,25 +31,25 @@ export function ComparingSection() {
 								delay: 0.3,
 							},
 						}}
-						className='flex justify-between h-44 items-center'
+						className='flex h-[330px] justify-between h-44 items-center  text-[6.25vw] xl:text-[80px] 3xl:text-[120px] leading-[198px] text-main_dark tracking-[0.3px] text-main-'
 					>
 						<div className=''>
-							<p className='text-5xl sm:text-7xl'>
-								15<span className='italic'>g</span>
+							<p>
+								0<span>g</span>
 							</p>
-							<p className='text-2xl font-normal'>Sugars</p>
+							<p className='text-3xl 3xl:text-4.5xl uppercase font-normal'>Sugars</p>
 						</div>
 						<div className='h-full w-px bg-grey'></div>
 						<div>
-							<p className='text-5xl sm:text-7xl'>90</p>
-							<p className='text-2xl font-normal'>Calories</p>
+							<p>95</p>
+							<p className='text-3xl 3xl:text-4.5xl uppercase font-normal'>Calories</p>
 						</div>
 					</motion.div>
 				</div>
 			</div>
-			<div className='h-full grow font-bold py-20 sm:py-28 px-10 sm:px-16'>
-				<div className='flex flex-col h-full max-w-90 sm:max-w-[525px] justify-between mx-auto'>
-					<motion.h3
+			<div className='h-full w-1/2 font-bold py-20 sm:py-28  sm:px-16 3xl:px-[110px] 3xl:pt-[70px] 3xl:pb-[150px] bg-main_dark text-[#f2e6d8]'>
+				<div className='flex flex-col gap-[163px] mx-auto '>
+					<motion.div
 						initial={{ opacity: 0 }}
 						whileInView={{
 							opacity: 1,
@@ -58,10 +59,10 @@ export function ComparingSection() {
 								delay: 0.3,
 							},
 						}}
-						className='text-7xl sm:text-8xl'
+						className='h-[367px] relative text-[6.25vw] xl:text-[100px] 3xl:text-[120px] leading-[198px] tracking-[0.3px] uppercase'
 					>
-						THEM
-					</motion.h3>
+						others
+					</motion.div>
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{
@@ -73,18 +74,18 @@ export function ComparingSection() {
 								delay: 0.3,
 							},
 						}}
-						className='flex justify-between h-44 items-center text-text'
+						className='flex h-[330px] justify-between h-44 items-center text-[6.25vw] xl:text-[80px] 3xl:text-[120px] leading-[198px] tracking-[0.3px]'
 					>
-						<div>
-							<p className='text-5xl sm:text-7xl'>
-								15<span className='italic'>g</span>
+						<div className=''>
+							<p>
+								15<span>g</span>
 							</p>
-							<p className='text-2xl font-normal'>Sugars</p>
+							<p className='text-3xl 3xl:text-4.5xl uppercase font-normal'>Sugars</p>
 						</div>
-						<div className='h-full w-px bg-text'></div>
+						<div className='h-full w-px bg-grey'></div>
 						<div>
-							<p className='text-5xl sm:text-7xl'>130</p>
-							<p className='text-2xl font-normal'>Calories</p>
+							<p>130</p>
+							<p className='text-3xl 3xl:text-4.5xl uppercase font-normal'>Calories</p>
 						</div>
 					</motion.div>
 				</div>

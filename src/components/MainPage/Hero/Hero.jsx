@@ -64,7 +64,7 @@ export function Hero() {
 				initial={{opacity: 0, y:50}}
 				animate={{opacity: 1 ,y: 0 ,}}
 				transition={{duration:0.4, delay: 0.75}}
-				href="/#snaks">
+				href="/product/mango">
 				<button className="bg-[#FFFFFF08] rounded-[50%] uppercase font-bold text-s leading-5 tracking-[0.2px] w-[250px] h-[250px] text-text">
 					all Our Snacks
 				</button>

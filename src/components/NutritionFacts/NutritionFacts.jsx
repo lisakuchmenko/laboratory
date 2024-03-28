@@ -1,34 +1,41 @@
 import { nutritionDetails } from '../../data';
+import { motion } from 'framer-motion';
 
 export function NutritionFacts() {
-	return (
-		<div className='max-w-90 sm:max-w-262.5 mx-auto h-full pt-24 pb-10'>
-			<h2 className='text-3xl sm:text-4xl'>Nutrition Facts</h2>
-			<p className='text-xxs mt-4'>12 servings per container</p>
-			<table className='w-full mt-4 sm:mt-2'>
-				<thead className='text-xs text-left border-b-8 sm:border-b-4'>
-					<tr>
-						<th>Serving size 1 package(10g)</th>
-						<th>Amount</th>
-						<th>PDV*</th>
-					</tr>
-				</thead>
-				<tbody>
-					{nutritionDetails.map((el) => {
-						return (
-							<tr className='border-b h-16 align-bottom text-base sm:text-sm' key={el.name}>
-								<td>{el.name}</td>
-								<td className='text-xs'>{el.amount}</td>
-								<td className='text-xs'>{el.pdv !== null ? el.pdv + '%' : null}</td>
-							</tr>
-						);
-					})}
-				</tbody>
-			</table>
-			<p className='mt-10 w-full sm:w-190 text-base sm:text-sm'>
-				*The Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000
-				calories a day is used for general nutrition advice.{' '}
-			</p>
-		</div>
-	);
+	
+    return (
+        <section className='w-90 sm:w-262.5 lg:w-11/12 3xl:w-380 mx-auto mt-[300px] h-full'>
+            <h2 className='font-bold text-[4.6vw] 3xl:text-[80px] leading-[132px] tracking-[0.3px] text-center text-text uppercase'>nutrition breackdown</h2>
+            <div className='w-full mt-[70px]'>
+                <div className='border-b  text-[15px] flex leading-[25px] justify-between h-[35px] tracking-[0.3px] text-left text-text uppercase relative '>
+					<span className='basis-[49%]'>Serving size 1 package(10g)</span>
+					<span className='basis-[23.49%]'>Amount</span>
+					<span className='basis-[23.49%]'>PDV*</span>
+                </div>
+                <div className='mt-10 w-full flex flex-col gap-[30px] pb-2.5 border-b'>
+                    {nutritionDetails.map((el,i) => 
+						<motion.p 
+						initial={{ opacity: 0 }}
+						whileInView={{
+							opacity: 1,
+							transition: {
+								type: 'easeOut',
+								duration: 1,
+								delay: 0.05*(i+1),
+							},
+						}}
+						className='font-bold text-[20px] leading-[33px] flex tracking-[0.3px] justify-between' key={el.name}>
+							<span className='basis-[49%]'>{el.name}</span>
+							<span className='basis-[23.49%]'>{el.amount}</span>
+							<span className='basis-[23.49%]'>{el.pdv !== null ? el.pdv + '%' : null}</span>
+						</motion.p>
+                    )}
+                </div>
+            </div>
+            <p className='mt-12.5 w-full sm:w-[745px] font-normal text-[15px] leading-[23px] uppercase'>
+                *The Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000
+                calories a day is used for general nutrition advice.{' '}
+            </p>
+        </section>
+    );
 }
