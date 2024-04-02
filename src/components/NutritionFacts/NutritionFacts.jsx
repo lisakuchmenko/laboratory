@@ -5,7 +5,18 @@ export function NutritionFacts() {
 	
     return (
         <section className='w-90 sm:w-262.5 lg:w-11/12 3xl:w-380 mx-auto mt-[300px] h-full'>
-            <h2 className='font-bold text-[4.6vw] 3xl:text-[80px] leading-[132px] tracking-[0.3px] text-center text-text uppercase'>nutrition breackdown</h2>
+            <motion.h2 
+				initial={{ opacity: 0, y:45 }}
+				whileInView={{
+					opacity: 1,
+					y:0,
+					transition: {
+						type: 'easeOut',
+						duration: 1,
+						delay: 0.05,
+					},
+				}}
+			className='font-bold text-[4.6vw] 3xl:text-[80px] leading-[132px] tracking-[0.3px] text-center text-text uppercase'>nutrition breackdown</motion.h2>
             <div className='w-full mt-[70px]'>
                 <div className='border-b  text-[15px] flex leading-[25px] justify-between h-[35px] tracking-[0.3px] text-left text-text uppercase relative '>
 					<span className='basis-[49%]'>Serving size 1 package(10g)</span>
@@ -21,7 +32,7 @@ export function NutritionFacts() {
 							transition: {
 								type: 'easeOut',
 								duration: 1,
-								delay: 0.05*(i+1),
+								delay: 0.02*(i+1),
 							},
 						}}
 						className='font-bold text-[20px] leading-[33px] flex tracking-[0.3px] justify-between' key={el.name}>

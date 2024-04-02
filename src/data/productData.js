@@ -2,7 +2,7 @@ export const productData = [
 	{
 		id: 1,
 		name: 'mango',
-		ingredien_img: 'mango_ingredient.png',
+		ingredien_img: '/ingredient/mango_ingredient.png',
 		price: [
 			{ quantity: 3, price: 9 },
 			{ quantity: 5, price: 15 },
@@ -21,6 +21,7 @@ export const productData = [
 	{
 		id: 2,
 		name: 'banana',
+		ingredien_img: '/ingredient/banana_ingredient.png',
 		price: [
 			{ quantity: 3, price: 9 },
 			{ quantity: 5, price: 15 },
@@ -39,6 +40,7 @@ export const productData = [
 	{
 		id: 3,
 		name: 'pineapple',
+		ingredien_img: '/ingredient/pineapple_ingredient.png',
 		price: [
 			{ quantity: 3, price: 9 },
 			{ quantity: 5, price: 15 },

@@ -37,7 +37,7 @@ export function Ingredients() {
 						},
 					}} 
 					src={`/images/${product?.ingredien_img}`}
-					className='w-[222px] mx-auto mt-[70px]'
+					className='min-w-[222px] mx-auto mt-[70px]'
 					alt={product?.name}
 					/>
 			</motion.div>

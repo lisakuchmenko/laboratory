@@ -1,21 +1,15 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect} from 'react';
 import { ProductInfo } from './ProductInfo';
 import { ProductSelector } from './ProductSelector';
-import { productData } from '../../data';
-import { ImagesSection } from './ImagesSection';
 import { ProductPack } from './ProductPack';
 import { motion } from 'framer-motion';
 import {
-	variantsHeader,
 	variantsSelector,
-	variantsButton,
 	variantsDescription,
-	variantsImagesSection,
 } from './animations';
 import { useAppContext } from '../Context';
 import { AddToCartBtn } from '../Buttons';
 import { useProgressiveImg } from '../../hooks';
-import { useNavigate } from 'react-router-dom';
 
 export function ProductSection() {
 
@@ -53,7 +47,7 @@ export function ProductSection() {
 	}
 
 	return (
-		<div className='w-11/12 3xl:w-380 mx-auto relative mt-[153px] flex justify-between'>
+		<section className='w-11/12 3xl:w-380 mx-auto relative mt-[153px] flex justify-between'>
 			<div className='w-[46vw] 3xl:w-[874px]'>
 				<motion.img 
 					key={priductImagesArr[currentImageId].src} 
@@ -79,8 +73,8 @@ export function ProductSection() {
 					}
 				</div>
 			</div>
-			<div className='grow-0'>
-				<h1 className='font-bold text-8.25xl leading-[165.2px] tracking-[0.2px] uppercase'>mango</h1>
+			<div className='grow-0 relative 3xl:w-[565px]'>
+				<motion.h1 key={product.id} variants={variantsSelector} initial='hidden' animate='show' className='font-bold text-8.25xl leading-[165.2px] tracking-[0.2px] uppercase relative left-0 w-[40vw] text-right ml-[-250px]'>{product.name}</motion.h1>
 				<div className='ml-[79px] flex flex-col'>
 					<motion.div key={product.id} variants={variantsSelector} initial='hidden' animate='show'>
 						<ProductSelector />
@@ -94,6 +88,6 @@ export function ProductSection() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }

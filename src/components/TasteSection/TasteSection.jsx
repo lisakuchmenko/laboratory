@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function TasteSection() {
   return (
-    <div className="relative">
+    <section className="relative">
       <div
         style={{ background: "url('/images/space/space.gif')" }}
         className="h-screen w-full overflow-hidden relative mt-[330px] opacity-50">
@@ -37,6 +37,6 @@ export function TasteSection() {
           </motion.div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
