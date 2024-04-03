@@ -23,7 +23,7 @@ const AllSnaks = () => {
 
 
   return (
-    <section id="snaks" className="w-11/12 mx-auto 3xl:w-380 mb-75 3xl:mb-[320px] pb-40">
+    <section id="snaks" className="w-11/12 mx-auto 3xl:w-380 mb-75 3xl:mb-[320px] mt-[360px] pb-40">
       <motion.ul 
           initial={{opacity:0}}
           animate={{opacity: isSnakBlockInViev ? 1: 0}}

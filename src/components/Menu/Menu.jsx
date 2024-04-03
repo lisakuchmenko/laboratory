@@ -53,7 +53,7 @@ export function Menu() {
 								<li key={section}>
 									<Link 
 										className='uppercase font-bold text-[110px] leading-[182px] tracking-[0.2px] text-main_dark' 
-										href={`/#${section}`}
+										href={`/${section}`}
 										>
 										{section}
 									</Link>

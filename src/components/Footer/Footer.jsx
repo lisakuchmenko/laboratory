@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 export function Footer() {
   const sections = ["mango", "banana", "pineapple"];
 
+  const pages = ["about","contact","faq"]
+
   const ArrowImage = (
     <svg
       width="36"
@@ -51,16 +53,13 @@ export function Footer() {
 	            />
 	            <button className="w-9 h-9">{ArrowImage}</button>
 	          </div>
-	          <ul className="tracking-[0.2px] leading-5 text-s w-96 mt-12 sm:mt-0 font-bold space-y-1.5">
-	            <li>
-	              <a href="#">ABOUT</a>
-	            </li>
-	            <li>
-	              <a href="#">FAQS</a>
-	            </li>
-	            <li>
-	              <a href="#">CONTACT</a>
-	            </li>
+	          <ul className="tracking-[0.2px] uppercase leading-5 text-s w-96 mt-12 sm:mt-0 font-bold space-y-1.5">
+	            {
+					pages.map(page=>
+						<li>
+							<Link to={`/${page}`}>{page}</Link>
+						</li>
+				)}
 	          </ul>
 	        </div>
 	      </div>
