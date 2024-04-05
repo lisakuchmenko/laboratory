@@ -65,7 +65,7 @@ export function Footer() {
 	      </div>
      </div>
 	  <div className="mt-[170.58px] h-[184px] overflow-y-hidden">
-		<p className="w-fit h-[184px] text-[calc(100vw/9)] mx-auto font-bold leading-[373px] uppercase tracking-[0.2px]">tutti butes</p>
+		<p className="w-fit h-[184px] text-[calc(100vw/8.5)] mx-auto font-bold leading-[373px] uppercase tracking-[0.2px]">tutti bites</p>
 	  </div>
     </footer>
   );
