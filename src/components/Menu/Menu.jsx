@@ -20,8 +20,12 @@ export function Menu() {
 	const sections = [
 		"about",
 		"faqs",
-		"contacts"
+		"contact"
 	];
+
+	const onClickHandler = () => {
+		setOpenMenu(false);
+	}
 
 	return (
 		<motion.div
@@ -46,14 +50,17 @@ export function Menu() {
 						<CloseButton />
 					</div>
 				</div>
-				<div className='flex gap-[311px] items-end'>
-					<ul className='flex flex-col mt-[170.5px]'>
+				<div className='flex gap-[311px] mt-30 3xl:mt-[170.5px] items-end'>
+					<ul className='flex flex-col '>
 						{
 							sections.map(section=>
-								<li key={section}>
+								<li 
+									key={section}
+									onClick={onClickHandler}
+								>
 									<Link 
 										className='uppercase font-bold text-[110px] leading-[182px] tracking-[0.2px] text-main_dark' 
-										href={`/${section}`}
+										to={`/${section}`}
 										>
 										{section}
 									</Link>
@@ -67,7 +74,7 @@ export function Menu() {
 									key={page.name}
 									onClick={()=>redirectToProductPage(page.name)} 
 									className='font-bold text-main_dark tracking-[0.2px] text-xl leading-[33px] uppercase'>
-									<Link href={page.name}>{page.name}</Link>
+									<Link to={page.name}>{page.name}</Link>
 								</li>
 							)
 						}

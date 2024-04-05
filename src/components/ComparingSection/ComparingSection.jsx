@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export function ComparingSection() {
 	return (
 		<section className='w-full flex flex-col sm:flex-row mx-auto'>
-			<div className='h-full w-1/2 font-bold py-20 sm:py-28  sm:px-16 3xl:px-[110px] 3xl:pt-[70px] 3xl:pb-[150px] bg-[#f2e6d8]'>
+			<div className='h-full w-1/2 font-bold py-20 sm:py-28  sm:px-16 3xl:px-[80px] 4xl:px-[110px] 3xl:pt-[70px] 3xl:pb-[150px] bg-[#f2e6d8]'>
 				<div className='flex flex-col gap-[163px] mx-auto '>
 					<motion.div
 						initial={{ opacity: 0 }}
@@ -47,7 +47,7 @@ export function ComparingSection() {
 					</motion.div>
 				</div>
 			</div>
-			<div className='h-full w-1/2 font-bold py-20 sm:py-28  sm:px-16 3xl:px-[110px] 3xl:pt-[70px] 3xl:pb-[150px] bg-main_dark text-[#f2e6d8]'>
+			<div className='h-full w-1/2 font-bold py-20 sm:py-28  sm:px-16 3xl:[px-80px] 4xl:px-[110px] 3xl:pt-[70px] 3xl:pb-[150px] bg-main_dark text-[#f2e6d8]'>
 				<div className='flex flex-col gap-[163px] mx-auto '>
 					<motion.div
 						initial={{ opacity: 0 }}
@@ -82,7 +82,7 @@ export function ComparingSection() {
 							</p>
 							<p className='text-3xl 3xl:text-4.5xl uppercase font-normal'>Sugars</p>
 						</div>
-						<div className='h-full w-px bg-grey'></div>
+						<div className='h-full w-px bg-white'></div>
 						<div>
 							<p>130</p>
 							<p className='text-3xl 3xl:text-4.5xl uppercase font-normal'>Calories</p>

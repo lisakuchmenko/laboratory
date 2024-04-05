@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 
 export function HorizontalScrollText() {
 	const textRef = useRef(null);
@@ -9,7 +9,7 @@ export function HorizontalScrollText() {
 			textRef.current.style.right = `${scroll}px`;
 			return;
 		}
-		const scroll = window.scrollY - 1200;
+		const scroll = window.scrollY - 1500;
 		textRef.current.style.right = `${scroll}px`;
 	};
 

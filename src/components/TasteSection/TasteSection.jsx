@@ -7,7 +7,7 @@ export function TasteSection() {
         style={{ background: "url('/images/space/space.gif')" }}
         className="h-screen w-full overflow-hidden relative mt-[330px] opacity-50">
       </div>
-      <div className="w-75 absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:w-fit text-6xl font-normal leading-[90px] text-white text-left sm:text-center z-[100]">
+      <div className="w-10/12 absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-6xl font-normal leading-[90px] text-white text-left sm:text-center z-[100]">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{

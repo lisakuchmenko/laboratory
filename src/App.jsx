@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { ProductPage, MainPage, AboutPage, ContactPage } from './pages';
 import { ScrollToTop } from './components/ScrollToTop';
+import FAQPage from './pages/FAQPage';
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
 		{path: '/', element:<MainPage />},
 		{path: '/about', element:<AboutPage />},
 		{path: '/contact', element:<ContactPage />},
+		{path: '/faq', element:<FAQPage />},
 		{path: '/product/:product', element:<ProductPage />},
 	]
 

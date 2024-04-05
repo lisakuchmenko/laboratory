@@ -3,7 +3,6 @@ import { useAppContext } from '../Context';
 
 export function Ingredients() {
 	const { product } = useAppContext();
-	console.log(product);
 	return (
 		<motion.div
 			className='w-11/12 3xl:w-380 mx-auto mt-75 gap-[30px] text-[44px] leading-[73px]'

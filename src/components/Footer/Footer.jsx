@@ -56,7 +56,7 @@ export function Footer() {
 	          <ul className="tracking-[0.2px] uppercase leading-5 text-s w-96 mt-12 sm:mt-0 font-bold space-y-1.5">
 	            {
 					pages.map(page=>
-						<li>
+						<li key={page}>
 							<Link to={`/${page}`}>{page}</Link>
 						</li>
 				)}

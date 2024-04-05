@@ -50,7 +50,7 @@ const HeroImages = () => {
           ref={imageObj.ref}
           src={imageObj.src}
           alt="product_image"
-          className="w-[30vw] max-w-[486px] 3xl:w-[486px] 3xl:h-auto"
+          className="w-[calc(100%/3-(48px/3))] max-w-[486px] 3xl:w-[486px] 3xl:h-auto"
         />
       ))}
     </div>
