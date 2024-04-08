@@ -9,7 +9,7 @@ function App() {
 		{path: '/', element:<MainPage />},
 		{path: '/about', element:<AboutPage />},
 		{path: '/contact', element:<ContactPage />},
-		{path: '/faq', element:<FAQPage />},
+		{path: '/faqs', element:<FAQPage />},
 		{path: '/product/:product', element:<ProductPage />},
 	]
 
