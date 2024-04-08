@@ -3,52 +3,66 @@ import CommonHeroSection from "../components/CommonHeroSection";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { PageBlur } from "../components/PageBlur";
+import FAQs from "../components/FAQs";
 
 export default function FAQPage(params) {
+
+    const questionHeight = 120;
+
+	function onOutsideClickListener(e) {
+		if(!e.target.id.includes("question")){
+			closeAllOpenedQuestions();
+		}
+	}
 
 	const faqsArr = [
 		{
 			question: "is there any additional shugar?",
 			answer: "nope, just my own fructose from fruit.",
-			ref: useRef(null)
+			answerRef: useRef(null),
+			questionRef: useRef(null),
 		},
 		{
 			question: "how is tutti bites made?",
-			answer: "nope, just my own fructose from fruit.",
-			ref: useRef(null)
+			answer: "The fruit is first frozen and then the water is removed from the fruit by sublimation, leaving the fruit crisp and retaining its original shape.",
+			answerRef: useRef(null),
+			questionRef: useRef(null),
+		},
+		{
+			question: "how many ingredients du you use?",
+			answer: "just one - the fruit. Nothing alse, nothing extra",
+			answerRef: useRef(null),
+			questionRef: useRef(null),
+		},
+		{
+			question: "how it tastes",
+			answer: "the incredible aroma and taste of our bites will not leave you indifferent. You will not feel the difference between fruit and our bites because our bites are pure fruit",
+			answerRef: useRef(null),
+			questionRef: useRef(null),
 		}
-	]
+	];
+	
 
-	function onClickHandler (e, ref) {
-		// console.log(parseInt(ref.current.style.height) );
-		// console.log(!ref.current.style.height );
-		// parseInt(ref.current.style.height) !== 120  
-		// ? e.target.style.height = '200px' 
-		// : e.target.style.height = '120px'
+	function closeAllOpenedQuestions(){
+		faqsArr.forEach(({questionRef})=>{ 
+			if(parseInt(questionRef.current.style.height) > questionHeight ){
+				questionRef.current.style.height = `${questionHeight}px`
+			}
+		});
 	}
 
 
-  return (
-    <div className="bg-[#1D1B20] min-h-screen max-w-screen pt-8 font-sportingGrotesque text-text overflow-x-hidden scroll-smooth">
-      <Header />
-      <PageBlur>
-        <CommonHeroSection phrase={"FAQS"} />
-        <section className="w-11/12 mx-auto 3xl:w-380 mt-10">
-          <ul>
-			{faqsArr.map(({ref,question,answer})=>
-				<li 
-					ref={ref}
-					key={question}
-					onClick={(e)=>onClickHandler(e,ref)}
-					className="border-t border-dotted  h-30 text-3xl uppercase text-center pt-10 transition-all duration-500 overflow-hidden">{/* -t border-dotted */}
-					{question}
-					<p className="text-xl text-grey w-1/3 text-center mt-10 mx-auto">{answer}</p>
-				</li>
-				)}
-		  </ul>
-        </section>
-        <Footer />
-      </PageBlur>
-    </div>
-  );
+	return (
+		<div onClick={onOutsideClickListener} className="bg-[#1D1B20] min-h-screen max-w-screen pt-8 font-sportingGrotesque text-text overflow-x-hidden scroll-smooth">
+		<Header />
+		<PageBlur>
+			<CommonHeroSection phrase={"FAQS"} />
+			<FAQs  
+				faqsArr={faqsArr} 
+				closeAllOpenedQuestions={closeAllOpenedQuestions} 
+				questionHeight={questionHeight}/>
+			<Footer />
+		</PageBlur>
+		</div>
+	);
 }
