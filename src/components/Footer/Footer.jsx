@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export function Footer() {
   const sections = ["mango", "banana", "pineapple"];
@@ -21,11 +22,13 @@ export function Footer() {
   );
 
   return (
-    <footer className="mt-80 3xl:mt-100">
+    <footer className="mt-30 lg:mt-50 3xl:mt-80 3xl:mt-100">
      <div className="w-11/12 3xl:w-380 mx-auto">
-     	 <h2 className="text-[5rem] leading-[120px] text-center font-normal">
+     	 <motion.h2 
+		 initial={{opacity:0, y:50}} whileInView={{opacity:1,y: 0, transition: { type: "easeOut",duration: 0.5}}} 
+		 className="text-[5rem] leading-[120px] text-center font-normal">
 	        Take your snacking to <span className="text-grey">new heights.</span>
-	      </h2>
+	      </motion.h2>
 	      <div className="flex flex-col xl:flex-row justify-between gap-25 sm:mt-20 3xl:mx-auto 3xl:mt-50">
 	        <div className="flex flex-col mx-auto w-1/2 xl:w-[745px] 3xl:gap-12.5 3xl:mr-0">
 	          {sections.map((section) => (
